@@ -1,0 +1,38 @@
+div.han-la hanla:after {
+    content: " ";
+    display: inline;
+    font-family: Arial;
+    font-size: 0.89em;
+}
+
+div.han-la code hanla,
+div.han-la pre hanla,
+div.han-la kbd hanla,
+div.han-la samp hanla {
+    display: none;
+}
+
+div.han-la ol>hanla,
+div.han-la ul>hanla {
+    display: none;
+}
+
+
+p.han-la hanla:after {
+    content: " ";
+    display: inline;
+    font-family: Arial;
+    font-size: 0.89em;
+}
+
+p.han-la code hanla,
+p.han-la pre hanla,
+p.han-la kbd hanla,
+p.han-la samp hanla {
+    display: none;
+}
+
+p.han-la ol>hanla,
+p.han-la ul>hanla {
+    display: none;
+}
