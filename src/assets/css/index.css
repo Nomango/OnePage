@@ -1,79 +1,76 @@
 :root {
-    /* --main-color: #425268; */
-    --main-color: #3c6091;
-    --font-color: #555;
-    --highlight-color: #111;
+  --font-color: #555;
+  --highlight-color: #111;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #eee;
-    color: var(--font-color);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+  color: var(--font-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
-    color: var(--font-color);
-    transition: all .3s ease;
-    text-decoration: none;
-    border-bottom: 1px solid #999;
+  color: var(--font-color);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border-bottom: 1px solid #999;
 }
 
-a:hover, a:active {
-    color: var(--highlight-color);
+a:hover,
+a:active {
+  color: var(--highlight-color);
 }
 
 b {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .main-wrapper {
-    min-width: 800px;
-    margin: 0;
-    padding: 0;
+  min-width: 800px;
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (min-width: 800px) {
-    .main-wrapper {
-        margin: 30px auto;
-        width: 800px;
-        /* min-height: 1200px; */
-        box-shadow: 0px 0px 18px #cdcdcd;
-        background-color: #fff;
-    }
+  .main-wrapper {
+    margin: 30px auto;
+    width: 800px;
+    /* min-height: 1200px; */
+    box-shadow: 0px 0px 18px #cdcdcd;
+    background-color: #fff;
+  }
 }
 
 .main-container {
-    margin: 0 auto;
-    width: 90%;
-    padding-bottom: 30px;
+  margin: 0 auto;
+  width: 90%;
+  padding-bottom: 30px;
 }
 
-.header-title {
-    display: inline-block;
-    background-color: var(--main-color);
-    padding: 1rem .8rem;
-    color: #fff;
-    font-family: Impact;
-    font-size: 3rem;
-    text-shadow: 2px 2px 2px #000;
+#sidebar {
+  position: fixed;
+  bottom: 15%;
+  right: -88px;
+  z-index: 1000;
+  transition: all 0.3s ease;
 }
 
-#download-btn {
-    float: right;
-    margin: 15px 6px;
-    padding: 12px;
-    color: #999;
-    border: 1px solid #999;
-    border-radius: 10px;
-    box-shadow: 0 0 5px #999;
+#sidebar:hover {
+  right: 0;
 }
 
-#download-btn:hover {
-    cursor: pointer;
-    background-color: var(--main-color);
-    color: #fff;
-    text-shadow: 1px 1px 2px #000;
+#sidebar a {
+  display: block;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 10px 0 0 10px;
+  background-color: #425268;
+  color: #fff;
+}
+
+#sidebar a:hover {
+  cursor: pointer;
 }
