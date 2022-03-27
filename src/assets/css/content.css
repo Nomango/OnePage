@@ -86,7 +86,7 @@
 
 .content-corner {
     display: inline-block;
-    width: 20px;
+    width: 15px;
     height: 1px;
     vertical-align: top;
     margin: 0;
@@ -98,7 +98,7 @@
     width: 0;
     height: 0;
     border-top: 12px solid #343434;
-    border-left: 20px solid transparent;
+    border-left: 16px solid transparent;
     position: absolute;
     top: 0;
 }
@@ -109,8 +109,10 @@
     /* height: 120px; */
     border-left: 1px solid #cdcdcd;
     border-top: 1px solid #cdcdcd;
-    padding-left: 20px;
+    padding-left: 18px;
     padding-bottom: 10px;
+    padding-right: 5px;
+    text-align: justify;
 }
 
 .content-item {
