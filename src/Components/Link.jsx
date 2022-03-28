@@ -1,5 +1,5 @@
-function Url(props) {
-    let label = props.label
+export default function Link(props) {
+    let label = props.children
     if (!label) {
         label = props.url
     }
@@ -7,5 +7,3 @@ function Url(props) {
         <a href={props.url} target='_blank'>{label}</a>
     )
 }
-
-export default Url

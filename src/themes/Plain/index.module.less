@@ -1,6 +1,26 @@
-#main.theme-plain {
-    --main-color: #9cda2a;
-  
+.main-container {
+  --main-color: #9cda2a;
+  --font-color: #555;
+  --highlight-color: #111;
+
+  margin: 0 auto;
+  width: 90%;
+  padding-bottom: 30px;
+  color: var(--font-color);
+
+  :global {
+    a {
+      color: var(--font-color);
+      transition: color 0.3s ease;
+      text-decoration: none;
+      border-bottom: 1px solid #999;
+    }
+
+    a:hover,
+    a:active {
+      color: var(--highlight-color);
+    }
+
     .header {
       .header-title {
         display: inline-block;
@@ -8,58 +28,58 @@
         padding: 1rem 0.8rem;
         color: #fff;
         font-family: Impact;
-        font-size: 3rem;
+        font-size: 2rem;
         text-shadow: 2px 2px 2px #000;
       }
     }
-  
+
     .profile {
       padding-left: 10px;
       margin-bottom: 20px;
       display: flex;
-  
+
       .profile-left {
         display: inline-block;
         /* width: 80%; */
         flex: 1;
       }
-  
+
       .profile-right {
         display: inline-block;
         vertical-align: top;
         width: 18%;
         margin-left: 50px;
       }
-  
+
       .profile-name {
         color: var(--main-color);
         font-size: 2.4rem;
         font-weight: bold;
         margin: 30px 0 20px;
       }
-  
+
       .profile-avatar {
         display: block;
         margin: 0 auto;
         width: 90%;
       }
-  
+
       .profile-list hr {
         height: 1px;
         border: none;
         border-top: 1px solid #cdcdcd;
       }
-  
+
       .profile-items {
         display: flex;
       }
-  
+
       .profile-item {
         display: inline-flex;
         align-items: center;
         flex: 1;
       }
-  
+
       .profile-item-icon {
         display: inline-block;
         margin-left: 10px;
@@ -71,45 +91,45 @@
         background-position: center;
         background-origin: content-box;
       }
-  
+
       .profile-item-icon.i-birthday {
         background-image: url("/images/person.png");
         background-size: 50%;
       }
-  
+
       .profile-item-icon.i-address {
         background-image: url("/images/people.png");
         background-size: 52%;
       }
-  
+
       .profile-item-icon.i-phone {
         background-image: url("/images/phone.png");
         background-size: 42%;
       }
-  
+
       .profile-item-icon.i-email {
         background-image: url("/images/email.png");
         background-size: 55%;
       }
-  
+
       .profile-item-text {
         display: inline-block;
         vertical-align: top;
         margin-left: 6px;
       }
     }
-  
+
     .content-wrapper {
       margin: 0;
       padding: 0;
-  
+
       .content-header-wrapper {
         display: inline-block;
         padding: 0 0 0 10px;
         background: var(--main-color);
         position: relative;
         height: 36px;
-  
+
         ::before {
           content: "";
           width: 0;
@@ -120,7 +140,7 @@
           left: 100%;
           top: 0;
         }
-  
+
         ::after {
           content: "";
           width: 10px;
@@ -131,12 +151,12 @@
           transform: skewX(29deg);
           background-color: var(--main-color);
         }
-  
+
         .content-header {
           display: flex;
           align-items: center;
           height: 100%;
-  
+
           .content-header-icon {
             display: inline-flex;
             align-items: center;
@@ -148,27 +168,27 @@
             background-position: center;
             background-origin: content-box;
           }
-  
+
           .content-header-icon.i-package {
             background-image: url("/images/package.png");
             background-size: 82%;
           }
-  
+
           .content-header-icon.i-topology {
             background-image: url("/images/topology.png");
             background-size: 90%;
           }
-  
+
           .content-header-icon.i-school {
             background-image: url("/images/school.png");
             background-size: 100%;
           }
-  
+
           .content-header-icon.i-suit {
             background-image: url("/images/suit.png");
             background-size: 76%;
           }
-  
+
           .content-header-text {
             display: inline-flex;
             align-items: center;
@@ -179,10 +199,10 @@
           }
         }
       }
-  
+
       .content-main-wrapper {
         display: flex;
-  
+
         .content-corner {
           display: inline-block;
           width: 15px;
@@ -191,7 +211,7 @@
           margin: 0;
           position: relative;
         }
-  
+
         .content-corner::before {
           content: "";
           width: 0;
@@ -201,7 +221,7 @@
           position: absolute;
           top: 0;
         }
-  
+
         .content-main {
           display: inline-block;
           flex: 1;
@@ -213,41 +233,41 @@
           padding-right: 5px;
           text-align: justify;
         }
-  
+
         .content-item {
           margin: 20px 0 40px;
           break-before: avoid;
           break-inside: avoid;
           break-after: auto;
-  
+
           .content-title {
             display: flex;
             justify-content: space-around;
             margin: 20px 0;
             font-size: 1.1em;
-  
+
             .content-title-item:first-child {
               flex: 2;
             }
-  
+
             .content-title-item {
               flex: 1;
               color: var(--main-color);
               font-weight: bold;
             }
           }
-  
+
           .content-line {
             line-height: 140%;
             margin-bottom: 0.3em;
-  
+
             ul {
               padding-inline-start: 30px;
               margin-block-start: 0;
               margin-block-end: 0;
               list-style-type: disc;
             }
-  
+
             ul li {
               margin-bottom: 0.3em;
             }
@@ -256,4 +276,4 @@
       }
     }
   }
-  
+}

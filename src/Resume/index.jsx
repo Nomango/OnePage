@@ -1,5 +1,5 @@
-import avatar from './assets/avatars/avatar.jpg'
-import Url from './Url'
+import avatar from '../assets/avatars/avatar.jpg'
+import Link from '../Components/Link'
 
 function SecretPhone(phone, secret) {
   if (secret) {
@@ -12,16 +12,18 @@ function Title(props) {
   return <b>{props.text}</b>
 }
 
-var Resume = {
+export { Resume as default }
+
+const Resume = {
   name: '刘海波',
   nick_name: 'Nomango',
   desired_job: "后端研发工程师",
   avatar: avatar,
   show_avatar: import.meta.env.DEV,
   birthday: "1996.09.06",
-  phone: SecretPhone((20000000000-5224322883).toString(), import.meta.env.PROD),
-  home_page: <Url label="Github/Nomango" url="https://github.com/Nomango" />,
-  email: <Url label="nomango@qq.com" url="mailto://nomango@qq.com" />,
+  phone: SecretPhone((20000000000 - 5224322883).toString(), import.meta.env.PROD),
+  home_page: <Link url="https://github.com/Nomango">Github/Nomango</Link>,
+  email: <Link url="mailto://nomango@qq.com">nomango@qq.com</Link>,
   address: "广东省深圳市",
   sections: [
     {
@@ -90,7 +92,7 @@ var Resume = {
           name: "基于Modern C++的通用配置库",
           duration: "2019.04 — 至今",
           preview_label: "项目地址：",
-          preview_url: <Url url="https://github.com/Nomango/configor" />,
+          preview_url: <Link url="https://github.com/Nomango/configor" />,
           description: [
             [
               <>C++练手项目，较多的使用了Modern C++语法与技巧，注重项目规范与编码质量；</>,
@@ -103,7 +105,7 @@ var Resume = {
           name: "基于DirectX的C++ 2D游戏引擎",
           duration: "2017.09 — 2020.12",
           preview_label: "项目地址：",
-          preview_url: <Url url="https://github.com/KiwanoEngine/kiwano" />,
+          preview_url: <Link url="https://github.com/KiwanoEngine/kiwano" />,
           description: [
             [
               <>包含渲染引擎、场景管理、动画管理、GUI、音频引擎、物理引擎等模块，具有较完善的日志、内存管理、资源管理、事件分发与监听机制等功能；</>,
@@ -116,7 +118,7 @@ var Resume = {
           name: "基于 NTP 的自校时打铃系统",
           duration: "2018.05 — 2019.05",
           preview_label: "项目地址：",
-          preview_url: <Url url="https://github.com/Nomango/bellex" />,
+          preview_url: <Link url="https://github.com/Nomango/bellex" />,
           description: [
             [
               <>作为项目负责人带领 8 人小组设计和开发该系统，该项目成功获得 2018 年国家级大创项目立项资格，并在2019 年互联网+大赛中获得校赛第三名；</>,
@@ -130,7 +132,7 @@ var Resume = {
           name: "基于Golang的local cache库",
           duration: "2020.12 — 2021.01",
           preview_label: "项目地址：",
-          preview_url: <Url url="https://github.com/Nomango/go-cache" />,
+          preview_url: <Link url="https://github.com/Nomango/go-cache" />,
           description: [
             [
               <>本地缓存小工具，支持高并发场景，支持自动清理、LRU等机制。</>,
@@ -182,5 +184,3 @@ var Resume = {
     }
   ]
 }
-
-export default Resume

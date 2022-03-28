@@ -1,13 +1,32 @@
 import './assets/css/index.css'
 import { useState } from "react"
-import Profile from './Profile'
-import Content from './Content'
-import Resume from './Resume'
 import html2pdf from 'html2pdf.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload, faPaintRoller } from '@fortawesome/free-solid-svg-icons'
+import Resume from './Resume'
+import Plain from './themes/Plain'
+import Blues from './themes/Blues'
 
-function DownloadPdf() {
+export default function App() {
+  const Themes = [Plain, Blues].map(Theme => {
+    return <Theme resume={Resume} />
+  });
+  const [themeIdx, setTheme] = useState(0);
+  const switchTheme = () => setTheme((themeIdx + 1) % Themes.length);
+  return (
+    <div className='main-wrapper font-hei'>
+      <div id="main">
+        { Themes[themeIdx] }
+      </div>
+      <div id="sidebar">
+        <a role="button" onClick={switchTheme}><FontAwesomeIcon icon={faPaintRoller} /> Theme</a>
+        <a role="button" onClick={downloadPdf}><FontAwesomeIcon icon={faDownload} /> Download</a>
+      </div>
+    </div>
+  )
+}
+
+function downloadPdf() {
   var element = document.getElementById('main');
   var opt = {
     margin: 0,
@@ -19,30 +38,3 @@ function DownloadPdf() {
   };
   html2pdf().set(opt).from(element).save();
 }
-
-function App() {
-  const themes = ['blues', 'plain'];
-  const [theme, setTheme] = useState(0);
-  const switchTheme = () => {
-    let value = theme+1
-    if (value == themes.length) {
-      setTheme(0)
-    } else {
-      setTheme(value)
-    }
-  }
-  return (
-    <div className="main-wrapper">
-      <div id="main" className={`main-container font-hei theme-${themes[theme]}`}>
-        <Profile />
-        <Content />
-      </div>
-      <div id="sidebar">
-        <a role="button" onClick={switchTheme}><FontAwesomeIcon icon={faPaintRoller} /> Theme</a>
-        <a role="button" onClick={DownloadPdf}><FontAwesomeIcon icon={faDownload} /> Download</a>
-      </div>
-    </div>
-  )
-}
-
-export default App
