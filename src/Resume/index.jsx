@@ -1,5 +1,7 @@
-import avatar from '../assets/avatars/avatar.jpg'
 import Link from '../Components/Link'
+import { faPhone, faUser, faEnvelope, faBriefcase, faCode, faGraduationCap, faPenToSquare } from '@fortawesome/free-solid-svg-icons'
+import avatar from '../assets/avatars/avatar.jpg'
+import { faGithubAlt } from '@fortawesome/free-brands-svg-icons'
 
 function SecretPhone(phone, secret) {
   if (secret) {
@@ -9,7 +11,8 @@ function SecretPhone(phone, secret) {
 }
 
 function Title(props) {
-  return <b>{props.text}</b>
+  return <>{props.text}</>
+  // return <b>{props.text}</b>
 }
 
 export { Resume as default }
@@ -20,19 +23,32 @@ const Resume = {
   desired_job: "后端研发工程师",
   avatar: avatar,
   show_avatar: import.meta.env.DEV,
-  birthday: "1996.09.06",
-  phone: SecretPhone((20000000000 - 5224322883).toString(), import.meta.env.PROD),
-  home_page: <Link url="https://github.com/Nomango">Github/Nomango</Link>,
-  email: <Link url="mailto://nomango@qq.com">nomango@qq.com</Link>,
-  address: "广东省深圳市",
+  basic_info: [
+    {
+      icon: faUser,
+      content: <>男 | 生日：1996/09</>
+    },
+    {
+      icon: faPhone,
+      content: SecretPhone((20000000000 - 5224322883).toString(), import.meta.env.PROD)
+    },
+    {
+      icon: faGithubAlt,
+      content: <Link url="https://github.com/Nomango">Github/Nomango</Link>
+    },
+    {
+      icon: faEnvelope,
+      content: <Link url="mailto://nomango@qq.com">nomango@qq.com</Link>
+    },
+  ],
   sections: [
     {
       title: '工作经历',
-      icon: 'i-package',
+      icon: faBriefcase,
       items: [
         {
           name: '字节跳动有限公司',
-          duration: "2020.04 — 至今",
+          duration: "2020.04 - 至今",
           position: "Golang后端工程师",
           description: [
             <><Title text="工作概要" />：主要负责广告审核业务下的通用数据链路建设、机器审核模型迭代、反作弊反欺诈等相关工作；</>,
@@ -49,10 +65,10 @@ const Resume = {
         },
         {
           name: "天津（滨海）军民融合人工智能创新中心",
-          duration: "2019.07 — 2020.04",
+          duration: "2019.07 - 2020.04",
           position: "C++研发工程师",
           description: [
-            <><Title text="公司简介" />：创新中心是人工智能领域的新型科研机构，致力于研发我国自主创新的群体协同人工智能操作系统。</>,
+            // <><Title text="公司简介" />：创新中心是人工智能领域的新型科研机构，致力于研发我国自主创新的群体协同人工智能操作系统。</>,
             <><Title text="工作概要" />：主要负责基于ROS机器人操作系统的无人平台应用开发工作；</>,
             <><Title text="技术栈" />：<b>C++</b>、<b>ROS</b>，以及少量的Gazebo和Docker相关技术；</>,
             <><Title text="荣誉奖项" />：于2019年12月分别获得<b>年度综合考评先进个人</b>与<b>年度优秀员工</b>；</>,
@@ -66,10 +82,10 @@ const Resume = {
         },
         {
           name: "成都琛石科技有限公司",
-          duration: "2018.04 — 2018.10",
+          duration: "2018.04 - 2018.10",
           position: "Golang后端实习生",
           description: [
-            <><Title text="公司简介" />：公司专注虚拟化领域，旗下核心产品“实验楼”是国内领先的IT在线编程及实训学习平台。</>,
+            // <><Title text="公司简介" />：公司专注虚拟化领域，旗下核心产品“实验楼”是国内领先的IT在线编程及实训学习平台。</>,
             <><Title text="工作概要" />：主要负责海外的IT在线学习平台的功能开发与维护工作；</>,
             <><Title text="技术栈" />：<b>Golang</b>、<b>Beego</b>、gRPC、MongoDB，以及少量的Docker、Docker Swarm、Flask等技术；</>,
             <><Title text="主要产出" />：</>,
@@ -86,11 +102,11 @@ const Resume = {
     },
     {
       title: '开源项目',
-      icon: 'i-topology',
+      icon: faCode,
       items: [
         {
           name: "基于Modern C++的通用配置库",
-          duration: "2019.04 — 至今",
+          duration: "2019.04 - 至今",
           preview_label: "项目地址：",
           preview_url: <Link url="https://github.com/Nomango/configor" />,
           description: [
@@ -103,7 +119,7 @@ const Resume = {
         },
         {
           name: "基于DirectX的C++ 2D游戏引擎",
-          duration: "2017.09 — 2020.12",
+          duration: "2017.09 - 2020.12",
           preview_label: "项目地址：",
           preview_url: <Link url="https://github.com/KiwanoEngine/kiwano" />,
           description: [
@@ -116,7 +132,7 @@ const Resume = {
         },
         {
           name: "基于 NTP 的自校时打铃系统",
-          duration: "2018.05 — 2019.05",
+          duration: "2018.05 - 2019.05",
           preview_label: "项目地址：",
           preview_url: <Link url="https://github.com/Nomango/bellex" />,
           description: [
@@ -130,7 +146,7 @@ const Resume = {
         },
         {
           name: "基于Golang的local cache库",
-          duration: "2020.12 — 2021.01",
+          duration: "2020.12 - 2021.01",
           preview_label: "项目地址：",
           preview_url: <Link url="https://github.com/Nomango/go-cache" />,
           description: [
@@ -143,11 +159,11 @@ const Resume = {
     },
     {
       title: '校园经历',
-      icon: 'i-school',
+      icon: faGraduationCap,
       items: [
         {
           name: "西南民族大学",
-          duration: "2015.09 — 2019.6",
+          duration: "2015.09 - 2019.6",
           position: "软件工程（本科）",
           description: [
             "GPA：3.02 / 4.00 （专业GPA：3.37）",
@@ -156,7 +172,7 @@ const Resume = {
         },
         {
           name: "敲客校园",
-          duration: "2016.10 — 2018.06",
+          duration: "2016.10 - 2018.06",
           description: [
             [
               <>作为社团<b>创始人</b>之一，带领 20 人左右的编程爱好者团队开展交流活动和小型编程竞赛；</>,
@@ -168,7 +184,7 @@ const Resume = {
     },
     {
       title: '自我评价',
-      icon: 'i-suit',
+      icon: faPenToSquare,
       items: [
         {
           description: [

@@ -11,8 +11,9 @@ export default function App() {
   const Themes = [Plain, Blues].map(Theme => {
     return <Theme resume={Resume} />
   });
-  const [themeIdx, setTheme] = useState(0);
+  const [themeIdx, setTheme] = useState(1);
   const switchTheme = () => setTheme((themeIdx + 1) % Themes.length);
+  // FIXME 切换主题后text-autospace失效
   return (
     <div className='main-wrapper font-hei'>
       <div id="main">
@@ -29,11 +30,11 @@ export default function App() {
 function downloadPdf() {
   var element = document.getElementById('main');
   var opt = {
-    margin: 0,
+    margin: [20, 0],
     filename: `${Resume.name}-${Resume.desired_job}-简历.pdf`,
     image: { type: 'jpeg', quality: 0.98 },
     pagebreak: { mode: 'css' }, // 分页指示样式绑定在 content-item 元素上
-    html2canvas: { scale: 2, ignoreElements: (e) => e.id == 'sidebar', imageTimeout: 1000 },
+    html2canvas: { ignoreElements: (e) => e.id == 'sidebar', scale: 2, imageTimeout: 1000 },
     jsPDF: { unit: 'pt', format: 'a4', orientation: 'portrait' }
   };
   html2pdf().set(opt).from(element).save();

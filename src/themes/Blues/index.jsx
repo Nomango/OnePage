@@ -1,4 +1,5 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Style from './index.module.less'
 
 export default function Content(props) {
@@ -10,31 +11,15 @@ export default function Content(props) {
       </div>
       <div className="profile">
         <div className="profile-left">
-          <div className="profile-name">{resume.name}</div>
-          <div className="profile-list">
-            <hr />
-            <div className="profile-items">
-              <div className="profile-item">
-                <div className="profile-item-icon i-birthday"></div>
-                <div className="profile-item-text">主页：{resume.home_page}</div>
-              </div>
-              <div className="profile-item">
-                <div className="profile-item-icon i-address"></div>
-                <div className="profile-item-text">现居：{resume.address}</div>
-              </div>
-            </div>
-            <hr />
-            <div className="profile-items">
-              <div className="profile-item">
-                <div className="profile-item-icon i-phone"></div>
-                <div className="profile-item-text">电话：{resume.phone}</div>
-              </div>
-              <div className="profile-item">
-                <div className="profile-item-icon i-email"></div>
-                <div className="profile-item-text">邮箱：{resume.email}</div>
-              </div>
-            </div>
-            <hr />
+          <h1 className="profile-name">{resume.name}</h1>
+          <div className="profile-items">
+            {
+              resume.basic_info.map((info, i) => {
+                return (
+                  <BasicInfo info={info} key={`info-${i}`} />
+                )
+              })
+            }
           </div>
         </div>
         {
@@ -48,10 +33,20 @@ export default function Content(props) {
       {
         resume.sections.map((section, i) => {
           return (
-            <Section section={section} key={`section-${i}`} theme={props.theme} />
+            <Section section={section} key={`section-${i}`} />
           )
         })
       }
+    </div>
+  )
+}
+
+function BasicInfo(props) {
+  let info = props.info;
+  return (
+    <div className="profile-item">
+      <FontAwesomeIcon className='profile-item-icon' icon={info.icon} />
+      <div className="profile-item-text">{info.content}</div>
     </div>
   )
 }
@@ -62,8 +57,8 @@ function Section(props) {
     <div className="content-wrapper han-la">
       <div className="content-header-wrapper">
         <div className="content-header">
-          <div className={`content-header-icon ${section.icon}`}></div>
-          <div className="content-header-text">{section.title}</div>
+          <FontAwesomeIcon className='content-header-icon' icon={section.icon} />
+          <h2 className="content-header-text">{section.title}</h2>
         </div>
       </div>
       <div className="content-main-wrapper">
@@ -72,7 +67,7 @@ function Section(props) {
           {
             section.items.map((item, i) => {
               return (
-                <Item item={item} key={`item-${i}`} theme={props.theme} />
+                <Item item={item} key={`item-${i}`} />
               )
             })
           }
@@ -89,9 +84,9 @@ function Item(props) {
       {
         item.name && (
           <div className="content-title">
-            <div className="content-title-item">{item.name}</div>
-            <div className="content-title-item">{item.duration}</div>
-            <div className="content-title-item">{item.position ? item.position : null}</div>
+            <h3 className="content-title-item">{item.name}</h3>
+            <h3 className="content-title-item">{item.duration}</h3>
+            <h3 className="content-title-item">{item.position ? item.position : null}</h3>
           </div>
         )
       }
@@ -105,7 +100,7 @@ function Item(props) {
       {
         item.description.map((content, i) => {
           return (
-            <ItemDescription content={content} key={i} theme={props.theme} />
+            <ItemDescription content={content} key={i} />
           )
         })
       }
