@@ -46,6 +46,22 @@
         width: 90%;
       }
 
+      .profile-avatar-dummy {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        width: 90%;
+        height: 100%;
+        border: 1px dashed var(--lowlight-color);
+
+        p {
+          flex: 1;
+          color: var(--lowlight-color);
+          text-align: center;
+          user-select: none;
+        }
+      }
+
       .profile-items {
         display: flex;
         flex-wrap: wrap;
@@ -186,15 +202,9 @@
             justify-content: space-around;
             margin: 2rem 0;
 
-            .content-title-item:first-child {
-              flex: 2;
-              font-weight: bold;
-            }
-
-            .content-title-item {
-              flex: 1;
-              // color: var(--main-color);
-            }
+            // .content-title-item {
+            //   color: var(--main-color);
+            // }
           }
 
           .content-line {

@@ -15,7 +15,7 @@ export default function App() {
   const Themes = [Plain, Blues].map(Theme => {
     return <Theme resume={Resume} />
   });
-  const [themeIdx, setTheme] = useState(1);
+  const [themeIdx, setTheme] = useState(0);
   const switchTheme = () => {
     setTheme((themeIdx + 1) % Themes.length);
   };

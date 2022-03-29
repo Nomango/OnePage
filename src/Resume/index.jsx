@@ -105,53 +105,54 @@ const Resume = {
       icon: faCode,
       items: [
         {
-          name: "基于Modern C++的通用配置库",
+          name: "Modern C++适用的通用配置库",
           duration: "2019/04 - 至今",
           preview_label: "项目地址：",
           preview_url: <Link url="https://github.com/Nomango/configor" />,
           description: [
             [
-              <>C++练手项目，较多的使用了Modern C++语法与技巧，注重项目规范与编码质量；</>,
-              <>支持了非常灵活的JSON格式数据交互，遵循标准库的设计语言，降低用户学习成本，尽显C++优雅风范；</>,
-              <>在设计时尽可能考虑了可扩展性，未来还预计支持YAML、INI等其他数据格式；</>,
+              <>仅头文件的轻量级配置工具库，以书写优雅为目标，遵循STL设计规范，降低用户学习成本，同时覆盖大部分平台和编译环境下的C++11标准；</>,
+              <>具有非侵入式的序列化与反序列化、自定义类型隐式转换、完备的Unicode与多编码支持等特点；</>,
+              <>注重项目规范与编码质量，单侧覆盖率大于90%，并接入Github Actions，在PR时自动检测平台兼容性与覆盖率；</>,
+              <>在设计时尽可能考虑了可扩展性，目前仅支持JSON，未来还预计支持YAML、INI等其他数据格式。</>,
             ]
           ]
         },
         {
-          name: "基于DirectX的C++ 2D游戏引擎",
+          name: "Kiwano 2D游戏引擎",
           duration: "2017/09 - 2020/12",
           preview_label: "项目地址：",
-          preview_url: <Link url="https://github.com/KiwanoEngine/kiwano" />,
+          preview_url: <Link url="https://kiwanoengine.com" />,
           description: [
             [
-              <>包含渲染引擎、场景管理、动画管理、GUI、音频引擎、物理引擎等模块，具有较完善的日志、内存管理、资源管理、事件分发与监听机制等功能；</>,
+              <>基于Direct2D实现的C++ 2D游戏引擎，包含渲染引擎、场景管理、动画管理、音频管理、物理引擎等模块，具有较完善的日志、内存管理、资源管理、事件分发与监听等功能；</>,
               <>以该项目完成了毕业设计《基于C++泛型与元编程的游戏引擎性能优化方案研究》，并申请获得<b>软件著作权</b>和<b>发明专利</b>；</>,
-              <>具有易扩展性，支持基于XAudio2的多媒体音频模块、基于Box2D的物理引擎模块等。</>,
+              <>通过模板元编程技巧实现Matrix乘法表达式懒展开、侵入式的场景节点树结构、类string_view的字符串处理等以优化游戏性能；</>,
+              <>支持模块扩展，支持基于 XAudio2 + MediaFoundation 的多媒体音频模块、基于 ImGui 的 UI 模块、基于 Box2D 的物理引擎模块、基于 CURL 的 HTTPClient 模块等；</>,
+              <>接入appveyor ci自动构建与发布流程，通过PowerShell Script收集多job下产物，打包为7z与exe两种格式的installer，并发布到nuget平台。</>,
             ]
           ]
         },
         {
-          name: "基于 NTP 的自校时打铃系统",
-          duration: "2018/05 - 2019/05",
-          preview_label: "项目地址：",
-          preview_url: <Link url="https://github.com/Nomango/bellex" />,
-          description: [
-            [
-              <>作为项目负责人带领 8 人小组设计和开发该系统，该项目成功获得 2018 年国家级大创项目立项资格，并在2019 年互联网+大赛中获得校赛第三名；</>,
-              <>项目由<b>Beego</b>+<b>Vue</b>+<b>Electron</b>开发的后台系统，和一个与单片机通信的TCP服务器组成；</>,
-              <>使用<b>Jenkins</b>进行持续集成和自动化部署，通过Github hook自动拉取代码更新并部署；</>,
-              <>负责技术文档的编写以及维护，定期 review 小组成员的代码，与团队共同学习以及成长。</>,
-            ]
-          ]
-        },
-        {
-          name: "基于Golang的local cache库",
+          name: "Local Cache for Golang",
           duration: "2020/12 - 2021/01",
           preview_label: "项目地址：",
           preview_url: <Link url="https://github.com/Nomango/go-cache" />,
           description: [
             [
               <>本地缓存小工具，支持高并发场景，支持自动清理、LRU等机制。</>,
+            ]
+          ]
+        },
+        {
+          name: "OnePage个人主页",
+          duration: "2022/03 - 2022/03",
+          preview_label: "项目地址：",
+          preview_url: <Link url="https://onepage.nomango.cn" />,
+          description: [
+            [
+              <>这个简历本身；</>,
+              <>使用<b>ViteJS</b> + <b>React</b>搭建，支持主题切换 和 一键导出PDF。</>,
             ]
           ]
         }
@@ -173,13 +174,30 @@ const Resume = {
         {
           name: "敲客校园",
           duration: "2016/10 - 2018/06",
+          position: "社团创始人",
           description: [
             [
               <>作为社团<b>创始人</b>之一，带领 20 人左右的编程爱好者团队开展交流活动和小型编程竞赛；</>,
               <>组织团队成员完成外包任务，与创行中国合作完成了“摩麦搭档（H5）” “万豪问答（H5）”等多个项目。</>,
             ]
           ]
-        }
+        },
+        {
+          name: "基于 NTP 的自校时打铃系统",
+          duration: "2018/05 - 2019/05",
+          position: "大创项目",
+          preview_label: "项目地址：",
+          preview_url: <Link url="https://github.com/Nomango/bellex" />,
+          description: [
+            [
+              <>作为项目负责人带领 8 人小组设计和开发该系统，该项目成功获得 2018 年国家级大创项目立项，并在2019 年互联网+大赛中获得校赛第三名；</>,
+              <>使用NTP校时技术优化现有打铃系统的校时模块，提升校时精确性，相比于GPS校时降低约80%费用；</>,
+              <>项目由<b>Beego</b>+<b>Vue</b>+<b>Electron</b>开发的后台系统，和一个与单片机通信的TCP服务器组成；</>,
+              <>使用<b>Jenkins</b>进行持续集成和自动化部署，通过Github hook自动拉取代码更新并部署；</>,
+              <>负责技术文档的编写以及维护，定期 review 小组成员的代码，与团队共同学习以及成长。</>,
+            ]
+          ]
+        },
       ]
     },
     {

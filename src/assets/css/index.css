@@ -80,8 +80,16 @@ ul li::before {
   color: var(--lowlight-color);
 }
 
-.flex-full {
+.flex-1 {
   flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 #main-wrapper {

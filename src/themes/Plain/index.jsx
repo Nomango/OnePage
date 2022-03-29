@@ -12,10 +12,16 @@ export default function Content(props) {
           <p>{resume.desired_job}</p>
         </div>
         {
-          resume.show_avatar && (
+          resume.show_avatar ? (
             <div className="profile-right">
               <div className='profile-avatar-wrapper'>
                 <img className="profile-avatar" src={resume.avatar} alt="avatar" />
+              </div>
+            </div>
+          ) : (
+            <div className="profile-right">
+              <div className='profile-avatar-wrapper'>
+                <div className="profile-avatar-dummy"><p>avatar</p></div>
               </div>
             </div>
           )
@@ -79,7 +85,7 @@ function Item(props) {
       {
         item.name && (
           <div className="content-title">
-            <h3 className="content-title-item flex-full">{item.name}</h3>
+            <h3 className="content-title-item flex-1 bold">{item.name}</h3>
             <h3 className="content-title-item">{item.position ? item.position : null}</h3>
             <p className="content-title-item lowlight">{item.duration}</p>
           </div>

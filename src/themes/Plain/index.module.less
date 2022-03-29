@@ -40,6 +40,25 @@
           top: -1rem;
           left: 0;
         }
+
+        .profile-avatar-dummy {
+          position: absolute;
+          display: flex;
+          align-items: center;
+          top: 0;
+          left: 0;
+          width: 95%;
+          height: 95%;
+          border-radius: 0.6rem;
+          border: 1px dashed var(--lowlight-color);
+
+          p {
+            flex: 1;
+            color: var(--lowlight-color);
+            text-align: center;
+            user-select: none;
+          }
+        }
       }
     }
 
@@ -114,10 +133,6 @@
             display: flex;
             justify-content: space-around;
             margin: 2rem 0;
-
-            .content-title-item:first-child {
-              font-weight: bold;
-            }
 
             .content-title-item:last-child {
               margin-left: 2rem;

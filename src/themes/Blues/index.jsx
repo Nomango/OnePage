@@ -23,9 +23,13 @@ export default function Content(props) {
           </div>
         </div>
         {
-          resume.show_avatar && (
+          resume.show_avatar ? (
             <div className="profile-right">
               <img className="profile-avatar" src={resume.avatar} alt="avatar" />
+            </div>
+          ) : (
+            <div className="profile-right">
+              <div className="profile-avatar-dummy"><p>avatar</p></div>
             </div>
           )
         }
@@ -84,9 +88,9 @@ function Item(props) {
       {
         item.name && (
           <div className="content-title">
-            <h3 className="content-title-item">{item.name}</h3>
-            <h3 className="content-title-item">{item.duration}</h3>
-            <h3 className="content-title-item">{item.position ? item.position : null}</h3>
+            <h3 className="content-title-item flex-2 bold">{item.name}</h3>
+            <h3 className="content-title-item flex-1 lowlight">{item.duration}</h3>
+            <h3 className="content-title-item flex-1">{item.position ? item.position : null}</h3>
           </div>
         )
       }
