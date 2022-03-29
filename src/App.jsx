@@ -6,18 +6,23 @@ import { faDownload, faPaintRoller } from '@fortawesome/free-solid-svg-icons'
 import Resume from './Resume'
 import Plain from './themes/Plain'
 import Blues from './themes/Blues'
+import { autoGenTextSpace } from './utils/text-autospace'
+
+// 自动在中英文中间加空格
+autoGenTextSpace('#main');
 
 export default function App() {
   const Themes = [Plain, Blues].map(Theme => {
     return <Theme resume={Resume} />
   });
   const [themeIdx, setTheme] = useState(1);
-  const switchTheme = () => setTheme((themeIdx + 1) % Themes.length);
-  // FIXME 切换主题后text-autospace失效
+  const switchTheme = () => {
+    setTheme((themeIdx + 1) % Themes.length);
+  };
   return (
     <div className='main-wrapper font-hei'>
       <div id="main">
-        { Themes[themeIdx] }
+        {Themes[themeIdx]}
       </div>
       <div id="sidebar">
         <a role="button" onClick={switchTheme}><FontAwesomeIcon icon={faPaintRoller} /> Theme</a>

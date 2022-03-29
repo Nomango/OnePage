@@ -7,7 +7,6 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #eee;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -116,6 +115,10 @@ ul li::before {
 @media screen and (min-width: 1200px) {
   :root {
     font-size: 12px;
+  }
+
+  body {
+    background-color: #eee;
   }
 
   .main-wrapper {
