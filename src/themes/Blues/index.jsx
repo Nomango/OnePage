@@ -1,5 +1,5 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Icon from '../../Components/Icon';
 import Style from './index.module.less'
 
 export default function Content(props) {
@@ -45,7 +45,7 @@ function BasicInfo(props) {
   let info = props.info;
   return (
     <div className="profile-item">
-      <FontAwesomeIcon className='profile-item-icon' icon={info.icon} />
+      <Icon icon={info.icon} />
       <div className="profile-item-text">{info.content}</div>
     </div>
   )
@@ -57,7 +57,7 @@ function Section(props) {
     <div className="content-wrapper han-la">
       <div className="content-header-wrapper">
         <div className="content-header">
-          <FontAwesomeIcon className='content-header-icon' icon={section.icon} />
+          <Icon icon={section.icon} />
           <h2 className="content-header-text">{section.title}</h2>
         </div>
       </div>

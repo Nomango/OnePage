@@ -1,33 +1,33 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Icon from '../../Components/Icon';
 import Style from './index.module.less'
 
 export default function Content(props) {
   const resume = props.resume;
   return (
     <div className={Style['main-container']}>
-      <div className="header">
-        <div className="header-title">RESUME</div>
-      </div>
       <div className="profile">
         <div className="profile-left">
           <h1 className="profile-name">{resume.name}</h1>
-          <div className="profile-items">
-            {
-              resume.basic_info.map((info, i) => {
-                return (
-                  <BasicInfo info={info} key={`info-${i}`} />
-                )
-              })
-            }
-          </div>
+          <p>{resume.desired_job}</p>
         </div>
         {
           resume.show_avatar && (
             <div className="profile-right">
-              <img className="profile-avatar" src={resume.avatar} alt="avatar" />
+              <div className='profile-avatar-wrapper'>
+                <img className="profile-avatar" src={resume.avatar} alt="avatar" />
+              </div>
             </div>
           )
+        }
+      </div>
+      <div className="profile-items">
+        {
+          resume.basic_info.map((info, i) => {
+            return (
+              <BasicInfo info={info} key={`info-${i}`} />
+            )
+          })
         }
       </div>
       {
@@ -45,7 +45,7 @@ function BasicInfo(props) {
   let info = props.info;
   return (
     <div className="profile-item">
-      <FontAwesomeIcon className='profile-item-icon' icon={info.icon} />
+      <Icon className='profile-item-icon' icon={info.icon} />
       <div className="profile-item-text">{info.content}</div>
     </div>
   )
@@ -55,23 +55,18 @@ function Section(props) {
   let section = props.section;
   return (
     <div className="content-wrapper han-la">
-      <div className="content-header-wrapper">
-        <div className="content-header">
-          <FontAwesomeIcon className='content-header-icon' icon={section.icon} />
-          <h2 className="content-header-text">{section.title}</h2>
-        </div>
+      <div className="content-header">
+        <Icon className='content-header-icon' icon={section.icon} />
+        <h2 className="content-header-text">{section.title}</h2>
       </div>
-      <div className="content-main-wrapper">
-        <div className="content-corner"></div>
-        <div className="content-main">
-          {
-            section.items.map((item, i) => {
-              return (
-                <Item item={item} key={`item-${i}`} />
-              )
-            })
-          }
-        </div>
+      <div className="content-main">
+        {
+          section.items.map((item, i) => {
+            return (
+              <Item item={item} key={`item-${i}`} />
+            )
+          })
+        }
       </div>
     </div>
   )
@@ -84,9 +79,9 @@ function Item(props) {
       {
         item.name && (
           <div className="content-title">
-            <h3 className="content-title-item">{item.name}</h3>
-            <h3 className="content-title-item">{item.duration}</h3>
+            <h3 className="content-title-item flex-full">{item.name}</h3>
             <h3 className="content-title-item">{item.position ? item.position : null}</h3>
+            <p className="content-title-item lowlight">{item.duration}</p>
           </div>
         )
       }

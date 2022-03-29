@@ -3,7 +3,6 @@
 
   margin: 0 auto;
   width: 90%;
-  padding-bottom: 3rem;
 
   :global {
     .header {
@@ -60,14 +59,16 @@
           border-bottom: 1px solid #cdcdcd;
         }
 
-        .profile-item-icon {
-          display: inline-block;
-          margin-left: 1rem;
-          padding: .6rem;
-          font-size: 1rem;
-          color: #fff;
+        .icon-wrapper {
+          width: 2.4rem;
+          height: 2.4rem;
           border-radius: 50%;
           background-color: var(--main-color);
+
+          .icon-svg {
+            font-size: 1.2rem;
+            color: #fff;
+          }
         }
 
         .profile-item-text {
@@ -119,13 +120,11 @@
           align-items: center;
           height: 100%;
 
-          .content-header-icon {
-            display: inline-flex;
+          .icon-wrapper {
             padding: 0 .4rem;
             font-size: 1.4rem;
             margin: 0 .5rem;
             color: #fff;
-            align-items: center;
           }
 
           .content-header-text {
