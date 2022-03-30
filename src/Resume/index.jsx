@@ -23,6 +23,7 @@ const Resume = {
   desired_job: "后端研发工程师",
   avatar: avatar,
   show_avatar: import.meta.env.DEV,
+  home_page: 'https://nomango.cn',
   basic_info: [
     {
       icon: faUser,

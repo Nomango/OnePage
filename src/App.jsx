@@ -2,11 +2,12 @@ import './assets/css/index.css'
 import { useState } from "react"
 import html2pdf from 'html2pdf.js'
 import Icon from './Components/Icon'
-import { faDownload, faPaintRoller } from '@fortawesome/free-solid-svg-icons'
+import { faDownload, faHouse, faPaintRoller } from '@fortawesome/free-solid-svg-icons'
 import Resume from './Resume'
 import Plain from './themes/Plain'
 import Blues from './themes/Blues'
 import { autoGenTextSpace } from './utils/text-autospace'
+import Link from './Components/Link'
 
 // 自动在中英文中间加空格
 autoGenTextSpace('#main');
@@ -25,6 +26,11 @@ export default function App() {
         {Themes[themeIdx]}
       </div>
       <div id="sidebar">
+        {
+          Resume.home_page && (
+            <Link url={Resume.home_page}><Icon icon={faHouse} /> HomePage</Link>
+          )
+        }
         <a role="button" onClick={switchTheme}><Icon icon={faPaintRoller} /> Theme</a>
         <a role="button" onClick={downloadPdf}><Icon icon={faDownload} /> Download</a>
       </div>

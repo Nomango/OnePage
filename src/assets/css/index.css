@@ -102,7 +102,7 @@ ul li::before {
 #sidebar {
   position: fixed;
   bottom: 15%;
-  right: -7.6rem;
+  right: -8.6rem;
   z-index: 1000;
   transition: all 0.3s ease;
 }
