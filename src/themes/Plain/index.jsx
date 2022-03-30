@@ -9,7 +9,7 @@ export default function Content(props) {
       <div className="profile">
         <div className="profile-left">
           <h1 className="profile-name">{resume.name}</h1>
-          <p>{resume.desired_job}</p>
+          <p>{resume.signature}</p>
         </div>
         {
           resume.show_avatar ? (

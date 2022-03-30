@@ -20,6 +20,7 @@ export { Resume as default }
 const Resume = {
   name: '刘海波',
   nick_name: 'Nomango',
+  signature: "后端研发工程师 - 4年开发经验",
   desired_job: "后端研发工程师",
   avatar: avatar,
   show_avatar: import.meta.env.DEV,

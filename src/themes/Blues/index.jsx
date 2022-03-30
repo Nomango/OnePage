@@ -12,6 +12,7 @@ export default function Content(props) {
       <div className="profile">
         <div className="profile-left">
           <h1 className="profile-name">{resume.name}</h1>
+          <span className='profile-signature'>{resume.signature}</span>
           <div className="profile-items">
             {
               resume.basic_info.map((info, i) => {
