@@ -51,7 +51,7 @@ const Resume = {
       icon: faBriefcase,
       items: [
         {
-          name: '字节跳动有限公司',
+          name: '深圳字节跳动有限公司',
           duration: "2020/04 - 至今",
           position: "Golang后端工程师",
           description: [
@@ -68,7 +68,7 @@ const Resume = {
           ]
         },
         {
-          name: "天津（滨海）军民融合人工智能创新中心",
+          name: "天津军民融合人工智能创新中心",
           duration: "2019/07 - 2020/04",
           position: "C++研发工程师",
           description: [
@@ -80,7 +80,7 @@ const Resume = {
             [
               <>独立完成组内代码框架的构建，主要分为通信包、串口包、插件包、仿真包等模块； </>,
               <>完成Gazebo仿真平台上的海港应急场景构建，支持四种无人平台在同一场景下的仿真；</>,
-              <>完成大工X402四旋翼无人机和致导科技Q2500复合翼无人机的micROS适配工作。</>,
+              <>完成某型号四旋翼无人机和某型号复合翼无人机的micROS适配工作。</>,
             ]
           ]
         },
