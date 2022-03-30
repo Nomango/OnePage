@@ -2,7 +2,7 @@ import './assets/css/index.css'
 import { useState } from "react"
 import html2pdf from 'html2pdf.js'
 import Icon from './Components/Icon'
-import { faDownload, faHouse, faPaintRoller } from '@fortawesome/free-solid-svg-icons'
+import { faCode, faDownload, faHouse, faPaintRoller } from '@fortawesome/free-solid-svg-icons'
 import Resume from './Resume'
 import Plain from './themes/Plain'
 import Blues from './themes/Blues'
@@ -33,6 +33,7 @@ export default function App() {
         }
         <a role="button" onClick={switchTheme}><Icon icon={faPaintRoller} /> Theme</a>
         <a role="button" onClick={downloadPdf}><Icon icon={faDownload} /> Download</a>
+        <Link url='https://github.com/Nomango/onepage'><Icon icon={faCode} /> Source</Link>
       </div>
     </div>
   )

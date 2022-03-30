@@ -1,6 +1,6 @@
 import Link from '../Components/Link'
 import { faPhone, faUser, faEnvelope, faBriefcase, faCode, faGraduationCap, faPenToSquare } from '@fortawesome/free-solid-svg-icons'
-import avatar from '../assets/avatars/avatar.jpg'
+import avatar from './avatars/avatar.jpg'
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons'
 
 function SecretPhone(phone, secret) {
@@ -17,13 +17,15 @@ function Title(props) {
 
 export { Resume as default }
 
+const isDev = import.meta.env.DEV;
+
 const Resume = {
   name: '刘海波',
   nick_name: 'Nomango',
   signature: "后端研发工程师 - 4年开发经验",
   desired_job: "后端研发工程师",
   avatar: avatar,
-  show_avatar: import.meta.env.DEV,
+  show_avatar: isDev,
   home_page: 'https://nomango.cn',
   basic_info: [
     {
@@ -32,7 +34,7 @@ const Resume = {
     },
     {
       icon: faPhone,
-      content: SecretPhone((20000000000 - 5224322883).toString(), import.meta.env.PROD)
+      content: SecretPhone((20000000000 - 5224322883).toString(), !isDev)
     },
     {
       icon: faGithubAlt,
