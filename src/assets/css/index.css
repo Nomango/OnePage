@@ -5,11 +5,27 @@
   --lowlight-color: #666;
 }
 
+/* noto-sans-sc-regular */
+@font-face {
+  font-family: 'Noto Sans SC';
+  font-style: normal;
+  font-weight: regular;
+  src: url('//lib.baomitu.com/fonts/noto-sans-sc/noto-sans-sc-regular.eot'); /* IE9 Compat Modes */
+  src: local('Noto Sans SC'), local('NotoSans SC-Normal'),
+       url('//lib.baomitu.com/fonts/noto-sans-sc/noto-sans-sc-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('//lib.baomitu.com/fonts/noto-sans-sc/noto-sans-sc-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('//lib.baomitu.com/fonts/noto-sans-sc/noto-sans-sc-regular.woff') format('woff'), /* Modern Browsers */
+       url('//lib.baomitu.com/fonts/noto-sans-sc/noto-sans-sc-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('//lib.baomitu.com/fonts/noto-sans-sc/noto-sans-sc-regular.svg#NotoSans SC') format('svg'); /* Legacy iOS */
+}
+
 body {
   margin: 0;
   padding: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* font-family: 'Noto Sans SC', sans-serif; */
+  font-family: 'Noto Sans SC', -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
 }
 
 h1 {
@@ -97,6 +113,7 @@ ul li::before {
   margin: 0 auto;
   padding: 5rem 0 3rem;
   background-color: #fff;
+  user-select: none;
 }
 
 #sidebar {
