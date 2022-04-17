@@ -1,7 +1,8 @@
 import Link from '../Components/Link'
-import { faPhone, faUser, faEnvelope, faBriefcase, faCode, faGraduationCap, faPenToSquare } from '@fortawesome/free-solid-svg-icons'
+import { faPhone, faUser, faEnvelope, faBriefcase, faCode, faGraduationCap, faPenToSquare, faStar } from '@fortawesome/free-solid-svg-icons'
 import avatar from './avatars/avatar.jpg'
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons'
+import Icon from '../Components/Icon'
 
 function SecretPhone(phone, secret) {
   if (secret) {
@@ -57,12 +58,13 @@ const Resume = {
           description: [
             <><Title text="工作内容" />：主要负责广告审核业务下的通用数据链路建设、机器审核模型迭代、反作弊反欺诈等相关工作；</>,
             <><Title text="技术栈" />：<b>Golang</b>、<b>Kite</b>、<b>Gin</b>、ES、Redis、MongoDB、MySQL，以及少量的Kafka、图数据库等技术；</>,
+            <><Title text="荣誉奖项" />：于2022年4月获得<b>Spot Bonus</b> - 超出预期成果奖项；</>,
             <><Title text="主要产出" />：</>,
             [
-              <>搭建通用数据平台，支持数据链路可视化、可配置化，收敛三方接口权限，增强系统稳定性；</>,
               <>搭建机器审核模型迭代平台，支持语料标注、模型训练、阈值评估、快速灰度、模型部署的全流程自动化；</>,
-              <>搭建通用召回链路，实现对Flink实时数据流进行召回规则判断、规则提升、计数清除、下游触发的能力，将数据侧与业务逻辑剥离；</>,
+              <>搭建通用召回平台，对10万QPS左右的Flink实时数据流进行动态规则判断；</>,
               <>搭建关联图谱与舆情平台，协助运营同学对薅羊毛、黑灰产等违规违法的团伙行为进行挖掘与打击；</>,
+              <>搭建通用数据平台，支持数据链路可视化、可配置化，收敛三方接口权限，增强系统稳定性；</>,
               <>工作之余完成个人负责项目40%~60%的单测覆盖率，及多个通用基础组件库的建设。</>,
             ]
           ]
@@ -85,7 +87,7 @@ const Resume = {
           ]
         },
         {
-          name: "成都琛石科技有限公司",
+          name: "国信蓝桥（成都）教育科技有限公司",
           duration: "2018/04 - 2018/10",
           position: "Golang后端实习生",
           description: [
@@ -110,6 +112,7 @@ const Resume = {
       items: [
         {
           name: "Modern C++适用的通用配置库",
+          position: <>320+ <Icon icon={faStar} /></>,
           duration: "2019/04 - 至今",
           preview_label: "项目地址：",
           preview_url: <Link url="https://github.com/Nomango/configor" />,
@@ -124,6 +127,7 @@ const Resume = {
         },
         {
           name: "Kiwano 2D游戏引擎",
+          position: <>170+ <Icon icon={faStar} /></>,
           duration: "2017/09 - 2020/12",
           preview_label: "项目地址：",
           preview_url: <Link url="https://kiwanoengine.com" />,
@@ -133,33 +137,33 @@ const Resume = {
               <>以该项目完成了毕业设计《基于C++泛型与元编程的游戏引擎性能优化方案研究》，并申请获得<b>软件著作权</b>和<b>发明专利</b>；</>,
               <>通过模板元编程技巧实现Matrix乘法表达式懒展开、侵入式的场景节点树结构、类string_view的字符串处理等以优化游戏性能；</>,
               <>支持模块扩展，支持基于 XAudio2 + MediaFoundation 的多媒体音频模块、基于 ImGui 的 UI 模块、基于 Box2D 的物理引擎模块、基于 CURL 的 HTTPClient 模块等；</>,
-              <>接入appveyor ci自动构建与发布流程，通过PowerShell Script收集多job下产物，打包为7z与exe两种格式的installer，并发布到nuget平台。</>,
+              // <>接入appveyor ci自动构建与发布流程，通过PowerShell Script收集多job下产物，打包为7z与exe两种格式的installer，并发布到nuget平台。</>,
             ]
           ]
         },
-        {
-          name: "Local Cache for Golang",
-          duration: "2020/12 - 2021/01",
-          preview_label: "项目地址：",
-          preview_url: <Link url="https://github.com/Nomango/go-cache" />,
-          description: [
-            [
-              <>本地缓存小工具，支持高并发场景，支持自动清理、LRU等机制。</>,
-            ]
-          ]
-        },
-        {
-          name: "OnePage个人主页",
-          duration: "2022/03 - 2022/03",
-          preview_label: "项目地址：",
-          preview_url: <Link url="https://onepage.nomango.cn" />,
-          description: [
-            [
-              <>这个简历本身；</>,
-              <>使用<b>ViteJS</b> + <b>React</b>搭建，支持主题切换 和 一键导出PDF。</>,
-            ]
-          ]
-        }
+        // {
+        //   name: "Local Cache for Golang",
+        //   duration: "2020/12 - 2021/01",
+        //   preview_label: "项目地址：",
+        //   preview_url: <Link url="https://github.com/Nomango/go-cache" />,
+        //   description: [
+        //     [
+        //       <>本地缓存小工具，支持高并发场景，支持自动清理、LRU等机制。</>,
+        //     ]
+        //   ]
+        // },
+        // {
+        //   name: "OnePage个人主页",
+        //   duration: "2022/03 - 2022/03",
+        //   preview_label: "项目地址：",
+        //   preview_url: <Link url="https://onepage.nomango.cn" />,
+        //   description: [
+        //     [
+        //       <>这个简历本身；</>,
+        //       <>使用<b>ViteJS</b> + <b>React</b>搭建，支持主题切换 和 一键导出PDF。</>,
+        //     ]
+        //   ]
+        // }
       ]
     },
     {
@@ -182,7 +186,7 @@ const Resume = {
           description: [
             [
               <>作为社团<b>创始人</b>之一，带领 20 人左右的编程爱好者团队开展交流活动和小型编程竞赛；</>,
-              <>组织团队成员完成外包任务，与创行中国合作完成了“摩麦搭档（H5）” “万豪问答（H5）”等多个项目。</>,
+              <>组织团队成员完成外包任务，与创行中国合作完成了“摩麦搭档(H5)” “万豪问答(H5)”等多个项目。</>,
             ]
           ]
         },
@@ -195,7 +199,7 @@ const Resume = {
           description: [
             [
               <>作为项目负责人带领 8 人小组设计和开发该系统，该项目成功获得 2018 年国家级大创项目立项，并在2019 年互联网+大赛中获得校赛第三名；</>,
-              <>使用NTP校时技术优化现有打铃系统的校时模块，提升校时精确性，相比于GPS校时降低约80%费用；</>,
+              // <>使用NTP校时技术优化现有打铃系统的校时模块，提升校时精确性，相比于GPS校时降低约80%费用；</>,
               <>项目由<b>Beego</b>+<b>Vue</b>+<b>Electron</b>开发的后台系统，和一个与单片机通信的TCP服务器组成；</>,
               <>使用<b>Jenkins</b>进行持续集成和自动化部署，通过Github hook自动拉取代码更新并部署；</>,
               <>负责技术文档的编写以及维护，定期 review 小组成员的代码，与团队共同学习以及成长。</>,
@@ -204,21 +208,21 @@ const Resume = {
         },
       ]
     },
-    {
-      title: '自我评价',
-      icon: faPenToSquare,
-      items: [
-        {
-          description: [
-            [
-              <>有良好的代码风格，结构清晰，命名规范，逻辑性强，注重代码质量；</>,
-              <>研读过多个开源项目，学习改善代码的健壮性与扩展性；</>,
-              <>喜欢钻研语言底层与框架原理，能够阅读英文文档；</>,
-              <>善于与人沟通，有良好的团队合作精神和高度的责任感，能够承受压力。</>,
-            ]
-          ]
-        }
-      ]
-    }
+    // {
+    //   title: '自我评价',
+    //   icon: faPenToSquare,
+    //   items: [
+    //     {
+    //       description: [
+    //         [
+    //           <>有良好的代码风格，结构清晰，命名规范，逻辑性强，注重代码质量；</>,
+    //           <>研读过多个开源项目，学习改善代码的健壮性与扩展性；</>,
+    //           <>喜欢钻研语言底层与框架原理，能够阅读英文文档；</>,
+    //           <>善于与人沟通，有良好的团队合作精神和高度的责任感，能够承受压力。</>,
+    //         ]
+    //       ]
+    //     }
+    //   ]
+    // }
   ]
 }
