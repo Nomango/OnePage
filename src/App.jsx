@@ -47,7 +47,7 @@ function downloadPdf() {
 
   var element = document.getElementById('main');
   var opt = {
-    margin: [35, 0],
+    margin: [30, 0],
     filename: `${Resume.name}-${Resume.desired_job}-简历.pdf`,
     image: { type: 'jpeg', quality: 0.98 },
     pagebreak: { mode: 'css' }, // 分页指示样式绑定在 content-item 元素上
