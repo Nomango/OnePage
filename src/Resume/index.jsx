@@ -16,6 +16,10 @@ function Title(props) {
   // return <b>{props.text}</b>
 }
 
+function WorkingYears(entryYear) {
+  return new Date().getFullYear() - entryYear
+}
+
 export { Resume as default }
 
 const isDev = import.meta.env.DEV;
@@ -23,7 +27,7 @@ const isDev = import.meta.env.DEV;
 const Resume = {
   name: '刘海波',
   nick_name: 'Nomango',
-  signature: "后端研发工程师 - 3年开发经验",
+  signature: `后端研发工程师 - ${WorkingYears(2019)}年开发经验`,
   desired_job: "后端研发工程师",
   avatar: avatar,
   show_avatar: isDev,
