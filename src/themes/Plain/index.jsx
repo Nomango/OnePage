@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react';
 import Icon from '../../Components/Icon';
-import Style from './index.module.less'
+import Style from './index.module.less';
 
 export default function Content(props) {
   const resume = props.resume;
+  const [showDummyAvatar, setShowDummyAvatar] = useState(false);
   return (
     <div className={Style['main-container']}>
       <div className="profile">
@@ -11,21 +12,17 @@ export default function Content(props) {
           <h1 className="profile-name">{resume.name}</h1>
           <p>{resume.signature}</p>
         </div>
-        {
-          resume.show_avatar ? (
-            <div className="profile-right">
-              <div className='profile-avatar-wrapper'>
-                <img className="profile-avatar" src={resume.avatar} alt="avatar" />
-              </div>
-            </div>
-          ) : (
-            <div className="profile-right">
-              <div className='profile-avatar-wrapper'>
+        <div className="profile-right">
+          <div className='profile-avatar-wrapper'>
+            {
+              showDummyAvatar ? (
                 <div className="profile-avatar-dummy"><p>avatar</p></div>
-              </div>
-            </div>
-          )
-        }
+              ) : (
+                <img className="profile-avatar" src={resume.avatar} alt="avatar" onError={() => { setShowDummyAvatar(true); console.log(resume.avatar, 'is not found') }} />
+              )
+            }
+          </div>
+        </div>
       </div>
       <div className="profile-items">
         {

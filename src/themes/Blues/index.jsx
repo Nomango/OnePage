@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Icon from '../../Components/Icon';
 import Style from './index.module.less'
 
 export default function Content(props) {
   const resume = props.resume;
+  const [showDummyAvatar, setShowDummyAvatar] = useState(false);
   return (
     <div className={Style['main-container']}>
       <div className="header">
@@ -23,17 +24,15 @@ export default function Content(props) {
             }
           </div>
         </div>
-        {
-          resume.show_avatar ? (
-            <div className="profile-right">
-              <img className="profile-avatar" src={resume.avatar} alt="avatar" />
-            </div>
-          ) : (
-            <div className="profile-right">
+        <div className="profile-right">
+          {
+            showDummyAvatar ? (
               <div className="profile-avatar-dummy"><p>avatar</p></div>
-            </div>
-          )
-        }
+            ) : (
+              <img className="profile-avatar" src={resume.avatar} alt="avatar" onError={() => { setShowDummyAvatar(true); console.log(resume.avatar, 'is not found') }} />
+            )
+          }
+        </div>
       </div>
       {
         resume.sections.map((section, i) => {

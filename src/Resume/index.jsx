@@ -1,37 +1,16 @@
 import Link from '../Components/Link'
 import { faPhone, faUser, faEnvelope, faBriefcase, faCode, faGraduationCap, faPenToSquare, faStar } from '@fortawesome/free-solid-svg-icons'
-import avatar from './avatars/avatar.jpg'
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons'
 import Icon from '../Components/Icon'
 import { GithubRepoStarBadge } from '../Components/Badge'
+import Private from './private'
 
-function SecretPhone(phone, secret) {
-  if (secret) {
-    phone = phone.replace(/(\d{3})\d{4}(\d{4})/, "$1****$2")
-  }
-  return phone
-}
-
-function Title(props) {
-  return <>{props.text}</>
-  // return <b>{props.text}</b>
-}
-
-function WorkingYears(entryYear) {
-  return new Date().getFullYear() - entryYear
-}
-
-export { Resume as default }
-
-const isDev = import.meta.env.DEV;
-
-const Resume = {
+export default {
   name: '刘海波',
   nick_name: 'Nomango',
   signature: `后端研发工程师 - ${WorkingYears(2019)}年开发经验`,
   desired_job: "后端研发工程师",
-  avatar: avatar,
-  show_avatar: isDev,
+  avatar: Private.avatar,
   home_page: 'https://nomango.cn',
   basic_info: [
     {
@@ -40,7 +19,7 @@ const Resume = {
     },
     {
       icon: faPhone,
-      content: SecretPhone((20000000000 - 5224322883).toString(), !isDev)
+      content: Private.phone,
     },
     {
       icon: faGithubAlt,
@@ -229,4 +208,13 @@ const Resume = {
     //   ]
     // }
   ]
+}
+
+function Title(props) {
+  return <>{props.text}</>
+  // return <b>{props.text}</b>
+}
+
+function WorkingYears(entryYear) {
+  return new Date().getFullYear() - entryYear
 }
