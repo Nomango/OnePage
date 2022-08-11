@@ -3,6 +3,7 @@ import { faPhone, faUser, faEnvelope, faBriefcase, faCode, faGraduationCap, faPe
 import avatar from './avatars/avatar.jpg'
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons'
 import Icon from '../Components/Icon'
+import { GithubRepoStarBadge } from '../Components/Badge'
 
 function SecretPhone(phone, secret) {
   if (secret) {
@@ -113,7 +114,8 @@ const Resume = {
       items: [
         {
           name: "Modern C++适用的通用配置库",
-          position: <>320+ <Icon icon={faStar} /></>,
+          position: <GithubRepoStarBadge user="Nomango" repo="configor" />,
+          // position: <>320+ <Icon icon={faStar} /></>,
           duration: "2019/04 - 至今",
           preview_label: "项目地址：",
           preview_url: <Link url="https://github.com/Nomango/configor" />,
@@ -128,7 +130,8 @@ const Resume = {
         },
         {
           name: "Kiwano 2D游戏引擎",
-          position: <>170+ <Icon icon={faStar} /></>,
+          position: <GithubRepoStarBadge user="KiwanoEngine" repo="Kiwano" />,
+          // position: <>170+ <Icon icon={faStar} /></>,
           duration: "2017/09 - 2020/12",
           preview_label: "项目地址：",
           preview_url: <Link url="https://kiwanoengine.com" />,
