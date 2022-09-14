@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import GlobalContext from '../../Components/Context';
 import Icon from '../../Components/Icon';
 import Style from './index.module.less';
 
-export default function Content(props) {
-  const resume = props.resume;
+export default function Content() {
+  const { resume } = useContext(GlobalContext);
   const [showDummyAvatar, setShowDummyAvatar] = useState(false);
   return (
     <div className={Style['main-container']}>

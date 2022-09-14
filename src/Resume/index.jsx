@@ -4,8 +4,9 @@ import { faGithubAlt } from '@fortawesome/free-brands-svg-icons'
 import Icon from '../Components/Icon'
 import { GithubRepoStarBadge } from '../Components/Badge'
 import Private from './private'
+import React from 'react'
 
-export default {
+const Resume = {
   name: '刘海波',
   nick_name: 'Nomango',
   signature: `后端研发工程师 - ${WorkingYears(2019)}年开发经验`,
@@ -46,7 +47,7 @@ export default {
             <><Title text="主要产出" />：</>,
             [
               <>主导风控规则平台从0到1建设，对15w+QPS的数据流进行动态的风控规则判断，解耦数据流与业务逻辑，支持快速接入业务定制的风控场景；</>,
-              <>参与风控模型迭代自动化平台建设，实现从发起迭代，到模型部署上线的全流程自动化处理，平均提升用户工作效率40%以上；</>,
+              <>参与风控模型迭代自动化平台建设，实现从 发起模型迭代 到 模型部署上线 的全流程自动化处理，平均提升用户工作效率40%以上；</>,
               <>参与灰度能力迭代，复用离线数据，减少线上调用量，平均节约95%硬件资源，并在不同情境下提升约20%~40%的性能；</>,
               <>参与某风控工具建设，搭建离线数据清洗→数据导入→ES查询的完整链路，可查询关联的违规用户，在上线后4个月内协助运营同学打击了1400+违规用户；</>,
               <>工作之余完成个人负责项目40%~60%的单测覆盖率，同时建设了多个基础组件库。</>,
@@ -218,3 +219,5 @@ function Title(props) {
 function WorkingYears(entryYear) {
   return new Date().getFullYear() - entryYear
 }
+
+export default Resume;

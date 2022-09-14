@@ -1,5 +1,5 @@
 import './assets/css/index.css'
-import { useState } from "react"
+import { useMemo, useState } from "react"
 import html2pdf from 'html2pdf.js'
 import Icon from './Components/Icon'
 import { faCode, faDownload, faHouse, faPaintRoller } from '@fortawesome/free-solid-svg-icons'
@@ -8,34 +8,43 @@ import Plain from './themes/Plain'
 import Blues from './themes/Blues'
 import { autoGenTextSpace } from './utils/text-autospace'
 import Link from './Components/Link'
+import GlobalContext from './Components/Context'
 
 // 自动在中英文中间加空格
 autoGenTextSpace('#main');
 
+const Themes = [Plain, Blues];
+
 export default function App() {
-  const Themes = [Plain, Blues].map(Theme => {
-    return <Theme resume={Resume} />
-  });
   const [themeIdx, setTheme] = useState(0);
   const switchTheme = () => {
     setTheme((themeIdx + 1) % Themes.length);
   };
+  const value = useMemo(
+    () => ({
+      resume: Resume,
+      theme: Themes[themeIdx],
+    }),
+    [Resume, themeIdx]
+  );
   return (
-    <div id='main-wrapper' className='font-hei'>
-      <div id="main">
-        {Themes[themeIdx]}
+    <GlobalContext.Provider value={value}>
+      <div id='main-wrapper' className='font-hei'>
+        <div id="main">
+          {<value.theme />}
+        </div>
+        <div id="sidebar">
+          {
+            value.resume.home_page && (
+              <Link url={value.resume.home_page}><Icon icon={faHouse} /> HomePage</Link>
+            )
+          }
+          <a role="button" onClick={switchTheme}><Icon icon={faPaintRoller} /> Theme</a>
+          <a role="button" onClick={downloadPdf}><Icon icon={faDownload} /> Download</a>
+          <Link url='https://github.com/Nomango/onepage'><Icon icon={faCode} /> Source</Link>
+        </div>
       </div>
-      <div id="sidebar">
-        {
-          Resume.home_page && (
-            <Link url={Resume.home_page}><Icon icon={faHouse} /> HomePage</Link>
-          )
-        }
-        <a role="button" onClick={switchTheme}><Icon icon={faPaintRoller} /> Theme</a>
-        <a role="button" onClick={downloadPdf}><Icon icon={faDownload} /> Download</a>
-        <Link url='https://github.com/Nomango/onepage'><Icon icon={faCode} /> Source</Link>
-      </div>
-    </div>
+    </GlobalContext.Provider>
   )
 }
 
