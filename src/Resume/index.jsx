@@ -9,10 +9,10 @@ import React from 'react'
 const Resume = {
   name: '刘海波',
   nick_name: 'Nomango',
-  signature: `后端研发工程师 - ${WorkingYears(2019)}年开发经验`,
-  desired_job: "后端研发工程师",
+  signature: `全栈工程师 - ${WorkingYears(2019)}年开发经验`,
+  desired_job: "全栈工程师",
   avatar: Private.avatar,
-  home_page: 'https://nomango.cn',
+  home_page: 'https://nomango.dev',
   basic_info: [
     {
       icon: faUser,
@@ -37,12 +37,28 @@ const Resume = {
       icon: faBriefcase,
       items: [
         {
+          name: <>LabEx Team - <a href='https://labex.io' target='_blank'>labex.io</a></>,
+          duration: "2022/05 - 至今",
+          position: "技术负责人",
+          description: [
+            <><Title text="工作内容" />：带领技术团队完成基础设施建设，主导架构设计，自上到下包括所有微服务、CICD、云产品的选型与搭建；</>,
+            <><Title text="主要产出" />：</>,
+            [
+              <><b>技术选型</b>：后端采用 Go-Kratos + Asynq + Guacamole + KasmVNC + TTYD，前端 Nuxt，管理后台 Next.js + AntDesign；</>,
+              <><b>业务功能</b>：课程系统，容器远程桌面，支付系统，GPT接入，内容同步机制，OAuth系统，异步任务系统，文件管理，Forum等等；</>,
+              <><b>CICD</b>：Github Workflow + ACR (OCI Image Hub) + Docker Swarm + OSS Mount + Supervisor；</>,
+              <><b>人效提升</b>：通过 devcontainer、swagger、sentry 等提升研发人效，通过Lark文档同步和Bot通知、Github App、ChatGPT Tools等提升运营人效；</>,
+              <><b>质量把控</b>：规范PR准入流程，自动化测试与构建，异常监控即时上报与通知(Sentry + OpenTelemetry)，日志收集(SLS)，定期复盘线上问题。</>,
+            ]
+          ]
+        },
+        {
           name: '深圳字节跳动有限公司',
           duration: "2020/04 - 2022/05",
           position: "Golang后端工程师",
           description: [
             <><Title text="工作内容" />：主要负责广告审核业务下的几个风控平台开发工作，包括通用审核链路建设、风控模型迭代自动化、风控工具建设等；</>,
-            <><Title text="技术栈" />：<b>Golang</b>，<b>Kite-RPC</b>，<b>go-gin</b>，ES、Redis等常见存储，以及少量的Kafka、图数据库等技术；</>,
+            <><Title text="技术栈" />：<b>Go-Gin</b>，<b>Kite-RPC</b>，ES、Redis等常见存储，以及少量的Kafka、图数据库等技术；</>,
             <><Title text="荣誉奖项" />：于2022年4月获得<b>Spot Bonus</b> - 超出预期成果奖项；</>,
             <><Title text="主要产出" />：</>,
             [
@@ -61,7 +77,7 @@ const Resume = {
           description: [
             // <><Title text="公司简介" />：创新中心是人工智能领域的新型科研机构，致力于研发我国自主创新的群体协同人工智能操作系统。</>,
             <><Title text="工作内容" />：主要负责基于ROS机器人操作系统的无人平台应用开发工作；</>,
-            <><Title text="技术栈" />：<b>C++</b>、<b>ROS</b>（Robot OS），以及少量的Gazebo和Docker相关技术；</>,
+            <><Title text="技术栈" />：<b>ROS</b>（Robot OS），<b>Gazebo</b>，以及少量的嵌入式和Docker相关技术；</>,
             <><Title text="荣誉奖项" />：于2019年12月分别获得<b>年度综合考评先进个人</b>与<b>年度优秀员工</b>；</>,
             <><Title text="主要产出" />：</>,
             [
@@ -70,22 +86,22 @@ const Resume = {
             ]
           ]
         },
-        {
-          name: "国信蓝桥（成都）教育科技有限公司",
-          duration: "2018/04 - 2018/10",
-          position: "Golang后端实习生",
-          description: [
-            // <><Title text="公司简介" />：公司专注虚拟化领域，旗下核心产品“实验楼”是国内领先的IT在线编程及实训学习平台。</>,
-            <><Title text="工作内容" />：主要负责海外的IT在线学习平台的功能开发与维护工作；</>,
-            <><Title text="技术栈" />：<b>Golang</b>、<b>Beego</b>、gRPC、MongoDB，以及少量的Docker、Swarm、Flask等技术；</>,
-            <><Title text="主要产出" />：</>,
-            [
-              <>在与阿里云合作的澳门大数据比赛中，实现了报名表单、比赛流程逻辑处理、排行榜等功能；</>,
-              <>实现用户常见信息统计功能，包括登录、注册、活跃度等信息的留存、统计与查看等；</>,
-              <>参与国庆优惠活动的模型设计和逻辑实现，实现随机优惠码发放和使用功能。</>,
-            ],
-          ]
-        }
+        // {
+        //   name: "国信蓝桥（成都）教育科技有限公司",
+        //   duration: "2018/04 - 2018/10",
+        //   position: "Golang后端实习生",
+        //   description: [
+        //     // <><Title text="公司简介" />：公司专注虚拟化领域，旗下核心产品“实验楼”是国内领先的IT在线编程及实训学习平台。</>,
+        //     <><Title text="工作内容" />：主要负责海外的IT在线学习平台的功能开发与维护工作；</>,
+        //     <><Title text="技术栈" />：<b>Golang</b>、<b>Beego</b>、gRPC、MongoDB，以及少量的Docker、Swarm、Flask等技术；</>,
+        //     <><Title text="主要产出" />：</>,
+        //     [
+        //       <>在与阿里云合作的澳门大数据比赛中，实现了报名表单、比赛流程逻辑处理、排行榜等功能；</>,
+        //       <>实现用户常见信息统计功能，包括登录、注册、活跃度等信息的留存、统计与查看等；</>,
+        //       <>参与国庆优惠活动的模型设计和逻辑实现，实现随机优惠码发放和使用功能。</>,
+        //     ],
+        //   ]
+        // }
       ]
     },
     {
