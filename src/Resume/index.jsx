@@ -58,7 +58,7 @@ const Resume = {
           position: "Golang后端工程师",
           description: [
             <><Title text="工作内容" />：主要负责广告审核业务下的几个风控平台开发工作，包括通用审核链路建设、风控模型迭代自动化、风控工具建设等；</>,
-            <><Title text="技术栈" />：<b>Go-Gin</b>，<b>Kite-RPC</b>，ES、Redis等常见存储，以及少量的Kafka、图数据库等技术；</>,
+            <><Title text="技术栈" />：<b>Go-Gin</b>，<b>Kite-RPC</b>，ES、Redis等常见存储，以及少量的HiveSQL、Kafka、图数据库等技术；</>,
             <><Title text="荣誉奖项" />：于2022年4月获得<b>Spot Bonus</b> - 超出预期成果奖项；</>,
             <><Title text="主要产出" />：</>,
             [
