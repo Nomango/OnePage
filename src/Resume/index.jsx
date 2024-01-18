@@ -53,7 +53,7 @@ const Resume = {
           ]
         },
         {
-          name: '深圳字节跳动有限公司',
+          name: '字节跳动科技有限公司（深圳）',
           duration: "2020/04 - 2022/05",
           position: "Golang后端工程师",
           description: [
