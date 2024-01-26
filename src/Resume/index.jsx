@@ -44,7 +44,7 @@ const Resume = {
             <><Title text="工作内容" />：带领技术团队完成基础设施建设，主导架构设计，自上到下包括所有微服务、CICD、云产品的选型与搭建；</>,
             <><Title text="主要产出" />：</>,
             [
-              <><b>技术选型</b>：后端采用 Go-Kratos + Asynq + Guacamole + KasmVNC + TTYD，前端 Nuxt，管理后台 Next.js + AntDesign；</>,
+              <><b>技术选型</b>：后端 Go-Kratos + Go-Asynq，前端 Nuxt3，管理后台 Next.js + AntDesign，用户环境 Docker Swarm + KasmVNC + TTYD；</>,
               <><b>业务功能</b>：课程系统，容器远程桌面，支付系统，GPT接入，内容同步机制，OAuth系统，异步任务系统，文件管理，Forum等等；</>,
               <><b>CICD</b>：Github Workflow + ACR (OCI Image Hub) + Docker Swarm + OSS Mount + Supervisor；</>,
               <><b>人效提升</b>：通过 devcontainer、swagger、sentry 等提升研发人效，通过Lark文档同步和Bot通知、Github App、ChatGPT Tools等提升运营人效；</>,
