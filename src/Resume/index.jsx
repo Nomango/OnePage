@@ -112,7 +112,7 @@ const Resume = {
           name: "Modern C++适用的通用配置库",
           position: <GithubRepoStarBadge user="Nomango" repo="configor" />,
           // position: <>320+ <Icon icon={faStar} /></>,
-          duration: "2019/04 - 至今",
+          duration: "2019/04",
           preview_label: "项目地址：",
           preview_url: <Link url="https://github.com/Nomango/configor" />,
           description: [
@@ -128,7 +128,7 @@ const Resume = {
           name: "Kiwano 2D游戏引擎",
           position: <GithubRepoStarBadge user="KiwanoEngine" repo="Kiwano" />,
           // position: <>170+ <Icon icon={faStar} /></>,
-          duration: "2017/09 - 2020/12",
+          duration: "2017/09",
           preview_label: "项目地址：",
           preview_url: <Link url="https://kiwanoengine.com" />,
           description: [
@@ -143,7 +143,7 @@ const Resume = {
         },
         {
           name: "基于 NTP 的自校时打铃系统",
-          duration: "2018/05 - 2019/05",
+          duration: "2018/05",
           position: "大创项目",
           preview_label: "项目地址：",
           preview_url: <Link url="https://github.com/Nomango/bellex" />,
