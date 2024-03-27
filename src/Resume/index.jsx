@@ -12,7 +12,7 @@ const Resume = {
   signature: `全栈工程师 - ${WorkingYears(2019)}年开发经验`,
   desired_job: "全栈工程师",
   avatar: Private.avatar,
-  home_page: 'https://nomango.dev',
+  home_page: 'https://nomx.dev',
   basic_info: [
     {
       icon: faUser,
