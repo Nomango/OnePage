@@ -37,17 +37,17 @@ const Resume = {
       icon: faBriefcase,
       items: [
         {
-          name: <>LabEx Team - <a href='https://labex.io' target='_blank'>labex.io</a></>,
+          name: <>成都航诺莱百科技有限公司</>,
           duration: "2022/05 - 至今",
-          position: "技术负责人",
+          position: "技术合伙人",
           description: [
-            <><Title text="工作内容" />：带领技术团队完成基础设施建设，主导架构设计，自上到下包括所有微服务、CICD、云产品的选型与搭建；</>,
+            <><Title text="工作内容" />：作为技术负责人完成 <u><Link url="https://labex.io">labex.io</Link></u>（海外 IT 教育）和 <u><Link url="https://getvm.io">getvm.io</Link></u>（云桌面浏览器插件） 两个云产品。</>,
             <><Title text="主要产出" />：</>,
             [
-              <><b>技术选型</b>：后端 Go-Kratos + Go-Asynq，前端 Nuxt3，管理后台 Next.js + AntDesign，用户环境 Docker Swarm + KasmVNC + TTYD；</>,
-              <><b>业务功能</b>：课程系统，容器远程桌面，AI接入，支付系统，内容同步机制，OAuth系统，异步任务系统，文件管理，Forum等等；</>,
-              <><b>CICD</b>：Github Workflow + ACR (Image Hub) + Docker Swarm + OSS Mount + Supervisor；</>,
-              <><b>人效提升</b>：通过 devcontainer、swagger、sentry 等提升研发人效，通过Lark文档同步和Bot通知、Github App、ChatGPT Tools等提升运营人效；</>,
+              <><b>技术选型</b>：Web 框架以 Golang Kratos 为主，灵活选用 Cloudflare Worker/Queue/R2、Supabase、Deno 等部署微服务，用户环境采用 Docker Swarm + KasmVNC + CodeServer + TTYD；</>,
+              <><b>业务功能</b>：实现课程系统，容器远程桌面，AI接入，Web 插件，支付系统，内容同步机制，OAuth系统，异步任务系统，Forum等等；</>,
+              <><b>CICD</b>：主要通过 Github Workflow 完成单元测试、镜像构建、部署自动化、发布通知，通过 Docker Swarm 管理集群和服务，所有服务分离部署 Staging 和线上环境；</>,
+              <><b>人效提升</b>：使用 DevContainer、Github Action、Open API 等提升研发人效，通过 Lark 文档同步、Lark Bot 通知、Github App、ChatGPT Tools等提升运营人效；</>,
               <><b>质量把控</b>：规范PR准入流程，自动化测试与构建，异常监控即时上报与通知(Sentry + OpenTelemetry)，日志收集(SLS)，定期复盘线上问题。</>,
             ]
           ]
@@ -62,11 +62,11 @@ const Resume = {
             <><Title text="荣誉奖项" />：于2022年4月获得<b>Spot Bonus</b> - 超出预期成果奖项；</>,
             <><Title text="主要产出" />：</>,
             [
-              <>主导风控规则平台从0到1建设，对15w+QPS的数据流进行动态的风控规则判断，解耦数据流与业务逻辑，支持快速接入业务定制的风控场景；</>,
+              <>主导风控规则平台从0到1建设，对15w+ QPS的数据流进行动态的风控规则判断，解耦数据流与业务逻辑，支持快速接入业务定制的风控场景；</>,
               <>参与风控模型迭代自动化平台建设，实现从 发起模型迭代 到 模型部署上线 的全流程自动化处理，平均提升用户工作效率40%以上；</>,
-              <>参与灰度能力迭代，复用离线数据，减少线上调用量，平均节约95%硬件资源，并在不同情境下提升约20%~40%的性能；</>,
+              <>参与灰度能力迭代，复用离线数据，减少线上调用量，平均节约95%硬件资源，并在不同情境下提升约20% ~ 40%的性能；</>,
               <>参与某风控工具建设，搭建离线数据清洗→数据导入→ES查询的完整链路，可查询关联的违规用户，在上线后4个月内协助运营同学打击了1400+违规用户；</>,
-              <>工作之余完成个人负责项目40%~60%的单测覆盖率，同时建设了多个基础组件库。</>,
+              <>工作之余完成个人负责项目40% ~ 60%的单测覆盖率，同时建设了多个基础组件库。</>,
             ]
           ]
         },
@@ -77,7 +77,7 @@ const Resume = {
           description: [
             // <><Title text="公司简介" />：创新中心是人工智能领域的新型科研机构，致力于研发我国自主创新的群体协同人工智能操作系统。</>,
             <><Title text="工作内容" />：主要负责基于ROS机器人操作系统的无人平台应用开发工作；</>,
-            <><Title text="技术栈" />：<b>ROS</b>（Robot OS），<b>Gazebo</b>，以及少量的嵌入式和Docker相关技术；</>,
+            // <><Title text="技术栈" />：<b>ROS</b>（Robot OS），<b>Gazebo</b>，以及少量的嵌入式和Docker相关技术；</>,
             <><Title text="荣誉奖项" />：于2019年12月分别获得<b>年度综合考评先进个人</b>与<b>年度优秀员工</b>；</>,
             <><Title text="主要产出" />：</>,
             [
@@ -141,22 +141,22 @@ const Resume = {
             ]
           ]
         },
-        {
-          name: "基于 NTP 的自校时打铃系统",
-          duration: "2018/05",
-          position: "大创项目",
-          preview_label: "项目地址：",
-          preview_url: <Link url="https://github.com/Nomango/bellex" />,
-          description: [
-            [
-              <>作为项目负责人带领 8 人小组设计和开发该系统，该项目成功获得 2018 年国家级大创项目立项，并在2019 年互联网+大赛中获得校赛第三名；</>,
-              // <>使用NTP校时技术优化现有打铃系统的校时模块，提升校时精确性，相比于GPS校时降低约80%费用；</>,
-              <>项目由<b>Beego</b>+<b>Vue</b>+<b>Electron</b>开发的后台系统，和一个与单片机通信的TCP服务器组成；</>,
-              <>使用<b>Jenkins</b>进行持续集成和自动化部署，通过Github hook自动拉取代码更新并部署；</>,
-              <>负责技术文档的编写以及维护，定期 review 小组成员的代码，与团队共同学习以及成长。</>,
-            ]
-          ]
-        },
+        // {
+        //   name: "基于 NTP 的自校时打铃系统",
+        //   duration: "2018/05",
+        //   position: "大创项目",
+        //   preview_label: "项目地址：",
+        //   preview_url: <Link url="https://github.com/Nomango/bellex" />,
+        //   description: [
+        //     [
+        //       <>作为项目负责人带领 8 人小组设计和开发该系统，该项目成功获得 2018 年国家级大创项目立项，并在2019 年互联网+大赛中获得校赛第三名；</>,
+        //       // <>使用NTP校时技术优化现有打铃系统的校时模块，提升校时精确性，相比于GPS校时降低约80%费用；</>,
+        //       <>项目由<b>Beego</b>+<b>Vue</b>+<b>Electron</b>开发的后台系统，和一个与单片机通信的TCP服务器组成；</>,
+        //       <>使用<b>Jenkins</b>进行持续集成和自动化部署，通过Github hook自动拉取代码更新并部署；</>,
+        //       <>负责技术文档的编写以及维护，定期 review 小组成员的代码，与团队共同学习以及成长。</>,
+        //     ]
+        //   ]
+        // },
         // {
         //   name: "Local Cache for Golang",
         //   duration: "2020/12 - 2021/01",
