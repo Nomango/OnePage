@@ -45,8 +45,8 @@ const Resume = {
             <><Title text="主要产出" />：</>,
             [
               <><b>技术选型</b>：后端 Go-Kratos + Go-Asynq，前端 Nuxt3，管理后台 Next.js + AntDesign，用户环境 Docker Swarm + KasmVNC + TTYD；</>,
-              <><b>业务功能</b>：课程系统，容器远程桌面，支付系统，GPT接入，内容同步机制，OAuth系统，异步任务系统，文件管理，Forum等等；</>,
-              <><b>CICD</b>：Github Workflow + ACR (OCI Image Hub) + Docker Swarm + OSS Mount + Supervisor；</>,
+              <><b>业务功能</b>：课程系统，容器远程桌面，AI接入，支付系统，内容同步机制，OAuth系统，异步任务系统，文件管理，Forum等等；</>,
+              <><b>CICD</b>：Github Workflow + ACR (Image Hub) + Docker Swarm + OSS Mount + Supervisor；</>,
               <><b>人效提升</b>：通过 devcontainer、swagger、sentry 等提升研发人效，通过Lark文档同步和Bot通知、Github App、ChatGPT Tools等提升运营人效；</>,
               <><b>质量把控</b>：规范PR准入流程，自动化测试与构建，异常监控即时上报与通知(Sentry + OpenTelemetry)，日志收集(SLS)，定期复盘线上问题。</>,
             ]
