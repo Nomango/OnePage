@@ -41,14 +41,25 @@ const Resume = {
           duration: "2022/05 - 至今",
           position: "技术合伙人",
           description: [
-            <><Title text="工作内容" />：作为技术负责人完成 <u><Link url="https://labex.io">labex.io</Link></u>（海外 IT 教育）和 <u><Link url="https://getvm.io">getvm.io</Link></u>（云桌面浏览器插件） 两个云产品。</>,
-            <><Title text="主要产出" />：</>,
+            <><Title text="工作内容" />：作为<b>技术负责人</b>完成 LabEx（海外 IT 教育）和 GetVM（云桌面浏览器插件） 两个云产品。</>,
+            <><p style={{ height: '.5rem' }}></p><Title text="LabEx 项目" />（ <u><Link url="https://labex.io">labex.io</Link></u> ）：</>,
             [
-              <><b>技术选型</b>：Web 框架以 Golang Kratos 为主，灵活选用 Cloudflare Worker/Queue/R2、Supabase、Deno 等部署微服务，用户环境采用 Docker Swarm + KasmVNC + CodeServer + TTYD；</>,
-              <><b>业务功能</b>：实现课程系统，容器远程桌面，AI接入，Web 插件，支付系统，内容同步机制，OAuth系统，异步任务系统，Forum等等；</>,
-              <><b>CICD</b>：主要通过 Github Workflow 完成单元测试、镜像构建、部署自动化、发布通知，通过 Docker Swarm 管理集群和服务，所有服务分离部署 Staging 和线上环境；</>,
-              <><b>人效提升</b>：使用 DevContainer、Github Action、Open API 等提升研发人效，通过 Lark 文档同步、Lark Bot 通知、Github App、ChatGPT Tools等提升运营人效；</>,
-              <><b>质量把控</b>：规范PR准入流程，自动化测试与构建，异常监控即时上报与通知(Sentry + OpenTelemetry)，日志收集(SLS)，定期复盘线上问题。</>,
+              <>项目简介：面向海外 IT 教育，为用户提供容器 / 云主机实验环境，通过AI 辅助教学、Project动手实验、技能树、步骤化教程等方式促进用户学习；</>,
+              <>技术选型：Web 框架以 <b>Golang Kratos</b> 为主，灵活选用 Cloudflare Worker/Queue/R2、Supabase、Deno 等部署微服务，用户环境采用 Docker Swarm + KasmVNC + CodeServer + TTYD；</>,
+              <>工程难点：魔改 <b>Docker Swarm</b> 实现容器集群管理，通过 Nginx + Docker Network 实现任意端口访问，支持会员用户的环境保存功能；</>,
+              <>CICD：主要通过 Github Workflow 完成单元测试、镜像构建、部署自动化、发布通知，通过 Docker Swarm 管理集群和服务，所有服务分离部署 Staging 和线上环境。</>,
+            ],
+            <><p style={{ height: '.5rem' }}></p><Title text="GetVM 项目" />（ <u><Link url="https://getvm.io">getvm.io</Link></u> ）：</>,
+            [
+              <>项目简介：一款浏览器插件，借助 Chrome 在 23 年 5 月新推出的 SidePanel 功能，为用户提供在侧边栏访问云桌面的功能；</>,
+              // <>技术选型：插件框架选用 Wxt + Vue3，用户环境和 LabEx 同样采用 Docker Swarm 管理；</>,
+              <>工程难点：通过 NAS 挂载为用户提供持久化存储功能，通过 iptables + 阿里云风险监控 实现网络管控和挖矿等风险事件及时处理；</>,
+              // <>CICD：主要通过 Github Workflow 完成自动化管理插件版本、自动化发布 Chrome、Edge 商店。</>,
+            ],
+            <><p style={{ height: '.5rem' }}></p><Title text="其他贡献" />：</>,
+            [
+              <>人效提升：广泛借助 AI 和飞书系列服务提升运营人效，如通过 AI 大批量自动生成教程内容及课程封面图片、通过飞书文档同步管理技能树、服务上线通知到群等；</>,
+              <>质量把控：规范PR准入流程，自动化测试，异常监控上报(Sentry + OpenTelemetry)，日志收集(SLS)。</>,
             ]
           ]
         },
@@ -63,8 +74,8 @@ const Resume = {
             <><Title text="主要产出" />：</>,
             [
               <>主导风控规则平台从0到1建设，对15w+ QPS的数据流进行动态的风控规则判断，解耦数据流与业务逻辑，支持快速接入业务定制的风控场景；</>,
-              <>参与风控模型迭代自动化平台建设，实现从 发起模型迭代 到 模型部署上线 的全流程自动化处理，平均提升用户工作效率40%以上；</>,
-              <>参与灰度能力迭代，复用离线数据，减少线上调用量，平均节约95%硬件资源，并在不同情境下提升约20% ~ 40%的性能；</>,
+              <>参与风控模型迭代自动化平台建设，实现模型迭代的全流程自动化处理，平均提升用户工作效率40%以上；</>,
+              <>参与灰度能力迭代，复用离线数据，平均节约95%硬件资源，并在不同情境下提升约20% ~ 40%的性能；</>,
               <>参与某风控工具建设，搭建离线数据清洗→数据导入→ES查询的完整链路，可查询关联的违规用户，在上线后4个月内协助运营同学打击了1400+违规用户；</>,
               <>工作之余完成个人负责项目40% ~ 60%的单测覆盖率，同时建设了多个基础组件库。</>,
             ]
@@ -102,6 +113,32 @@ const Resume = {
         //     ],
         //   ]
         // }
+      ]
+    },
+    {
+      title: '校园经历',
+      icon: faGraduationCap,
+      items: [
+        {
+          name: "西南民族大学",
+          duration: "2015/09 - 2019/06",
+          position: "软件工程（本科）",
+          description: [
+            "GPA：3.02 / 4.00 （专业GPA：3.37）",
+            "荣誉/奖项：优秀毕业设计（2019）、校级先进个人（2017-2018）、优秀团员（2016-2017）"
+          ],
+        },
+        {
+          name: "敲客校园",
+          duration: "2016/10 - 2018/06",
+          position: "社团创始人",
+          description: [
+            [
+              <>作为社团<b>创始人</b>之一，带领 20 人左右的编程爱好者团队开展交流活动和小型编程竞赛；</>,
+              <>组织团队成员完成外包任务，与创行中国合作完成了“摩麦搭档(H5)” “万豪问答(H5)”等多个项目。</>,
+            ]
+          ]
+        },
       ]
     },
     {
@@ -180,32 +217,6 @@ const Resume = {
         //     ]
         //   ]
         // }
-      ]
-    },
-    {
-      title: '校园经历',
-      icon: faGraduationCap,
-      items: [
-        {
-          name: "西南民族大学",
-          duration: "2015/09 - 2019/06",
-          position: "软件工程（本科）",
-          description: [
-            "GPA：3.02 / 4.00 （专业GPA：3.37）",
-            "荣誉/奖项：优秀毕业设计（2019）、校级先进个人（2017-2018）、优秀团员（2016-2017）"
-          ],
-        },
-        {
-          name: "敲客校园",
-          duration: "2016/10 - 2018/06",
-          position: "社团创始人",
-          description: [
-            [
-              <>作为社团<b>创始人</b>之一，带领 20 人左右的编程爱好者团队开展交流活动和小型编程竞赛；</>,
-              <>组织团队成员完成外包任务，与创行中国合作完成了“摩麦搭档(H5)” “万豪问答(H5)”等多个项目。</>,
-            ]
-          ]
-        },
       ]
     },
     // {
