@@ -25,15 +25,19 @@ export default function Content() {
           </div>
         </div>
       </div>
-      <div className="profile-items">
-        {
-          resume.basic_info.map((info, i) => {
-            return (
-              <BasicInfo info={info} key={`info-${i}`} />
-            )
-          })
-        }
-      </div>
+      {
+        resume.basic_info && (
+          <div className="profile-items">
+            {
+              resume.basic_info.map((info, i) => {
+                return (
+                  <BasicInfo info={info} key={`info-${i}`} />
+                )
+              })
+            }
+          </div>
+        )
+      }
       {
         resume.sections.map((section, i) => {
           return (
@@ -64,13 +68,7 @@ function Section(props) {
         <h2 className="content-header-text">{section.title}</h2>
       </div>
       <div className="content-main">
-        {
-          section.items.map((item, i) => {
-            return (
-              <Item item={item} key={`item-${i}`} />
-            )
-          })
-        }
+        {section.items.map((item, i) => <Item item={item} key={`item-${i}`} />)}
       </div>
     </div>
   )
@@ -78,6 +76,24 @@ function Section(props) {
 
 function Item(props) {
   let item = props.item;
+  if (item.group) {
+    return (
+      <div className="content-item">
+        <div className="profile-items">
+          {
+            item.group.map((info, i) => <BasicInfo info={info} key={`info-${i}`} />)
+          }
+        </div>
+        {
+          item.description?.map((content, i) => {
+            return (
+              <ItemDescription content={content} key={i} />
+            )
+          })
+        }
+      </div>
+    )
+  }
   return (
     <div className="content-item">
       {

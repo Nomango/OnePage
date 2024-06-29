@@ -109,6 +109,12 @@ ul li::before {
   transition: all 0.3s ease;
 }
 
+@media print {
+  #sidebar {
+    display: none !important;
+  }
+}
+
 #sidebar:hover {
   right: 0;
 }
