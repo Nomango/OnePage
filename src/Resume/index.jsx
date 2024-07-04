@@ -80,7 +80,7 @@ const Resume = {
         {
           description: [
             [
-              <>拥有丰富的全栈开发经验，熟悉主流微服务架构方案，了解云原生技术前沿动向，具有多个中大型项目经验，并在其中发挥关键作用；</>,
+              <>拥有丰富的全栈开发经验，熟悉主流微服务架构方案，具有多个中大型项目经验，并在其中发挥关键作用；</>, // ，了解云原生技术前沿动向
               <>有团队管理经验，包括研运规范制定和落实、需求划分与技术方案设计等；</>,
               <>为人细心、开朗乐观、追求极致，认同技术服务于业务，但也追求在业务中实现最优雅的技术。</>,
             ],
@@ -190,7 +190,7 @@ const Resume = {
           duration: "2022/06 - 至今",
           // position: "技术负责人",
           description: [
-            <>技术栈：Kubernetes、Docker、Docker Swarm、Nginx、Golang、GRPC、MongoDB、Redis、Nuxt.js、Next.js、Deno.js；</>,
+            <>技术栈：Docker、Docker Swarm、Nginx、Golang、GRPC、MongoDB、Redis、Nuxt.js、Next.js、Deno.js；</>,
             <>主要产出：</>,
             [
               <>作为技术负责人完成系统架构设计、核心业务代码编写、DevOps 的搭建及维护等等；</>,
