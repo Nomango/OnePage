@@ -1,4 +1,4 @@
 export default {
-  avatar: '/avatar.jpg',
+  avatar: '/avatar.webp',
   phone: '147****7117',
 }
