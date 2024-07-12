@@ -69,12 +69,14 @@ ul li {
 }
 
 ul li::before {
-  content: "▢";
-  font-size: 1rem;
-  height: 100%;
-  top: 0;
+  content: " ";
+  top: .3rem;
   left: -2rem;
   position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border: 1.5px solid #333;
+  border-radius: .3rem;
 }
 
 .lowlight {
