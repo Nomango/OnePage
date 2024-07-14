@@ -80,8 +80,8 @@ const Resume = {
         {
           description: [
             [
-              <>5年Go后端、2年容器相关开发经验，熟悉主流微服务架构方案，有多个中大型项目任职经历；</>, // ，了解云原生技术前沿动向
-              <>核心技能：Golang、Python、Docker (Swarm)、MySQL、MongoDB、Redis、ES、Kafka、Nginx、Supabase、Cloudflare、Aliyun DevOps；</>,
+              <>5年Go后端、2年容器相关开发经验，熟悉主流微服务架构方案，了解K8S等云原生技术前沿动向，有多个中大型项目任职经历；</>,
+              <>核心技能：Golang、Python、Docker (Swarm)、MySQL、MongoDB、Redis、ES、Kafka、Nginx、Aliyun DevOps、Supabase、Cloudflare；</>,
               <>为人细心、开朗乐观、追求极致，自我驱动力强，乐于为项目的发展承担额外的工作和责任。</>,
             ],
           ]
