@@ -228,7 +228,7 @@ const Resume = {
           name: <>广告风控规则平台（字节跳动广告审核子平台）</>,
           duration: "2021/12 - 2022/05",
           description: [
-            <>技术栈：Golang、Python、Kafka、Redis、MySQL；</>,
+            <>技术栈：Golang、Python、Kafka、Redis、MySQL、Grafana；</>,
             <>主要产出：</>,
             [
               <>参与系统设计，并负责核心业务代码编写，实现MVP版本支撑 <b>15w+ QPS</b> 数据流的目标；</>,
