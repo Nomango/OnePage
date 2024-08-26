@@ -80,7 +80,7 @@ const Resume = {
         {
           description: [
             [
-              <>5年Go后端、2年容器相关开发经验，熟悉主流微服务架构方案，了解K8S等云原生技术前沿动向，有多个中大型项目任职经历；</>,
+              <>5年Go后端、2年容器相关开发经验，熟悉主流微服务架构方案，有多个中大型项目任职经历；</>,
               // <>核心技能：Golang、Python、Docker (Swarm)、MySQL、MongoDB、Redis、ES、Kafka、Nginx、Aliyun DevOps、Supabase、Cloudflare；</>,
               <>为人细心、开朗乐观、追求极致，自我驱动力强，乐于为项目的发展承担额外的工作和责任。</>,
             ],
@@ -108,20 +108,31 @@ const Resume = {
         {
           name: <>成都航诺莱百科技有限公司</>,
           duration: "2022/06 - 至今",
-          position: "技术负责人",
+          position: "全栈工程师",
           description: [
             <><Title text="公司简介" />：10人左右技术范小团队，主要创建 LabEx（在线IT实验与AI教学网站 <ExternalLink url="https://labex.io" /> ）和 GetVM（云桌面浏览器插件 <ExternalLink url="https://getvm.io" /> ）两款产品；</>,
-            <><Title text="工作内容" />：担任<b>技术负责人</b>合伙创办该公司，负责包括从0到1的技术团队组建、研发规范的制定及落实、系统架构设计、核心代码编写、DevOps 的搭建及维护、产品方向与定位思考、产研人效提升等等；</>,
-            <><Title text="技术栈" />：Docker (Swarm)、gRPC、Nginx、MongoDB、Redis、Nuxt.js、Deno.js、Supabase、Deno/Vercel Serverless、Cloudflare Worker/Queue/R2、Aliyun DevOps、Sentry；</>,
+            <><Title text="工作内容" />：担任<b>技术合伙人</b>合伙创办该公司，负责系统架构设计、核心代码编写、DevOps 的搭建及维护等等；</>,
+            <><Title text="技术栈" />：Docker (Swarm)、Golang、MySQL、MongoDB、Redis、Nginx、Nuxt.js、Deno.js、Supabase、Deno/Vercel Serverless、Cloudflare Worker/Queue/R2、Aliyun DevOps；</>,
             <><Title text="主要产出 & 工程难点" />：</>,
             [
-              <>在职期间保障系统稳定运行容器实验<b>30w+</b>次、云主机实验<b>3w+</b>次，应对服务异常、存储异常、高峰流量、恶意攻击等问题，确保核心业务系统的高可用性；</>,
-              <>魔改 Docker Swarm 实现用户环境的快速保存和启动，支持用户挂载 NAS 持久化存储，支持VNC、WebIDE、SSH等多种界面交互；</>,
-              <>落实<b>技术质量把控</b>，如规范PR准入流程、自动化单元测试、异常监控及上报、日志收集规范(SLS) 等。</>,
-              <>独立完成基于 Github Action 的完整 CICD 流程，容器化部署微服务，支持产品的快速迭代交付；</>,
+              <>负责包括课程系统、用户容器环境分配服务、AI对话助手、OAuth、支付系统、站内积分、异步任务等模块在内的整个网站所有主要接口的设计及开发工作；</>,
+              <>封装 Docker Swarm 实现独特的容器编排服务，支持用户环境的快速保存和启动、NAS 持久化存储挂载，保障系统稳定运行用户容器实验<b>30w+</b>次、云主机实验<b>3w+</b>次；</>,
+              // <>独立完成基于 Github Action 的完整 CICD 流程，容器化部署微服务，支持产品的快速迭代交付；</>,
               <>通过GA流量分析、SEMRush分析、SEO优化、AB测试运营策略等多种手段促长自然流量、提升转化率，帮助产品<b>从0成长到15w+</b>用户量；</>,
-              <>通过<b>AI实际应用</b>提升产研人效，如自动化社交账号运营、用户恶意操作识别及打击、自动化产出格式化课程内容、课程封面实时制作等等。</>,
+              <>通过<b>AI实际应用</b>提升产研人效，如自动化运营社交账号、识别及打击恶意用户操作、自动化产出格式化课程内容、实时制作课程封面等等。</>,
             ],
+            // <><Title text="公司简介" />：10人左右技术范小团队，主要创建 LabEx（在线IT实验与AI教学网站 <ExternalLink url="https://labex.io" /> ）和 GetVM（云桌面浏览器插件 <ExternalLink url="https://getvm.io" /> ）两款产品；</>,
+            // <><Title text="工作内容" />：担任<b>技术合伙人</b>合伙创办该公司，负责包括从0到1的技术团队组建、系统架构设计、核心代码编写、DevOps 的搭建及维护等等；</>,
+            // <><Title text="技术栈" />：Docker (Swarm)、gRPC、Nginx、MongoDB、Redis、Nuxt.js、Deno.js、Supabase、Deno/Vercel Serverless、Cloudflare Worker/Queue/R2、Aliyun DevOps；</>,
+            // <><Title text="主要产出 & 工程难点" />：</>,
+            // [
+            //   <>在职期间保障系统稳定运行容器实验<b>30w+</b>次、云主机实验<b>3w+</b>次，应对服务异常、存储异常、高峰流量、恶意攻击等问题，确保核心业务系统的高可用性；</>,
+            //   <>魔改 Docker Swarm 实现用户环境的快速保存和启动，支持用户挂载 NAS 持久化存储，支持VNC、WebIDE、SSH等多种界面交互；</>,
+            //   <>落实<b>技术质量把控</b>，如规范PR准入流程、自动化单元测试、异常监控及上报(Sentry)、日志收集(SLS) 等。</>,
+            //   <>独立完成基于 Github Action 的完整 CICD 流程，容器化部署微服务，支持产品的快速迭代交付；</>,
+            //   <>通过GA流量分析、SEMRush分析、SEO优化、AB测试运营策略等多种手段促长自然流量、提升转化率，帮助产品<b>从0成长到15w+</b>用户量；</>,
+            //   <>通过<b>AI实际应用</b>提升产研人效，如自动化社交账号运营、用户恶意操作识别及打击、自动化产出格式化课程内容、课程封面实时制作等等。</>,
+            // ],
           ]
         },
         // {
@@ -351,32 +362,32 @@ const Resume = {
         // }
       ]
     },
-    // {
-    //   title: '校园经历',
-    //   icon: faGraduationCap,
-    //   items: [
-    //     {
-    //       name: "西南民族大学",
-    //       duration: "2015/09 - 2019/06",
-    //       position: "软件工程（本科）",
-    //       description: [
-    //         "GPA：3.02 / 4.00 （专业GPA：3.37）",
-    //         "荣誉/奖项：优秀毕业设计（2019）、校级先进个人（2017-2018）、优秀团员（2016-2017）"
-    //       ],
-    //     },
-    //     {
-    //       name: "敲客校园",
-    //       duration: "2016/10 - 2018/06",
-    //       position: "社团创始人",
-    //       description: [
-    //         [
-    //           <>作为社团<b>创始人</b>之一，带领 20 人左右的编程爱好者团队开展交流活动和小型编程竞赛；</>,
-    //           <>组织团队成员完成外包任务，与创行中国合作完成了“摩麦搭档(H5)” “万豪问答(H5)”等多个项目。</>,
-    //         ]
-    //       ]
-    //     },
-    //   ]
-    // },
+    {
+      title: '校园经历',
+      icon: faGraduationCap,
+      items: [
+        {
+          name: "西南民族大学",
+          duration: "2015/09 - 2019/06",
+          position: "软件工程（本科）",
+          description: [
+            // "GPA：3.02 / 4.00 （专业GPA：3.37）",
+            "荣誉/奖项：优秀毕业设计（2019）、校级先进个人（2017-2018）、优秀团员（2016-2017）"
+          ],
+        },
+        {
+          name: "敲客校园",
+          duration: "2016/10 - 2018/06",
+          position: "社团发起人",
+          description: [
+            [
+              <>作为社团<b>发起人</b>之一，带领 20 人左右的编程爱好者团队开展交流活动和小型编程竞赛；</>,
+              <>组织团队成员完成外包任务，与创行中国合作完成了“摩麦搭档(H5)” “万豪问答(H5)”等多个项目。</>,
+            ]
+          ]
+        },
+      ]
+    },
   ]
 }
 
