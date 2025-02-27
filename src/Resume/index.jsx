@@ -12,14 +12,14 @@ const Resume = {
   name: '刘海波',
   nick_name: 'Nomango',
   // signature: `全栈工程师 - ${WorkingYears(2019)}年开发经验`,
-  signature: <>男 | 1996 | {WorkingYears(2019)} 年工作经验 | 联系方式：{Private.phone} / <Link url="mailto://nomango@qq.com">nomango@qq.com</Link></>,
+  signature: <>男 | 1996 | {WorkingYears(2019)} 年工作经验 | 联系方式：{Private.phone} / <Link url="mailto://lavliet@foxmail.com">lavliet@foxmail.com</Link></>,
   desired_job: "全栈工程师",
   avatar: Private.avatar,
   home_page: 'https://nomx.dev',
   basic_info: [
     {
       icon: faBuilding,
-      content: <>现居四川成都</>,
+      content: <>现居北京</>,
     },
     {
       icon: faGithubAlt,
@@ -106,20 +106,32 @@ const Resume = {
       icon: faBriefcase,
       items: [
         {
+          name: <>北京光智时空科技有限公司</>,
+          duration: "2024/10 - 至今",
+          position: "全栈工程师",
+          description: [
+            <><Title text="技术栈" />：Python、K8s、Terraform、AWS/GCP DevOps；</>,
+            <><Title text="主要产出" />：</>,
+            [
+              <>从零到一建设高可用的 infrastructure，帮助新项目灵活选型、快速启动。</>,
+            ],
+          ]
+        },
+        {
           name: <>成都航诺莱百科技有限公司</>,
-          duration: "2022/06 - 至今",
+          duration: "2022/06 - 2024/08",
           position: "全栈工程师",
           description: [
             <><Title text="公司简介" />：10人左右技术范小团队，主要创建 LabEx（在线IT实验与AI教学网站 <ExternalLink url="https://labex.io" /> ）和 GetVM（云桌面浏览器插件 <ExternalLink url="https://getvm.io" /> ）两款产品；</>,
-            <><Title text="工作内容" />：担任<b>技术合伙人</b>合伙创办该公司，负责系统架构设计、核心代码编写、DevOps 的搭建及维护等等；</>,
-            <><Title text="技术栈" />：Docker (Swarm)、Golang、MySQL、MongoDB、Redis、Nginx、Nuxt.js、Deno.js、Supabase、Deno/Vercel Serverless、Cloudflare Worker/Queue/R2、Aliyun DevOps；</>,
+            <><Title text="工作内容" />：担任<b>技术负责人</b>合伙创办该公司，完成系统架构设计、核心代码编写、DevOps 的搭建及维护等等；</>,
+            <><Title text="技术栈" />：Docker (Swarm)、Golang、MySQL、MongoDB、Redis、Nuxt.js、Next.js、Aliyun & Cloudflare DevOps；</>,
             <><Title text="主要产出 & 工程难点" />：</>,
             [
               <>负责包括课程系统、用户容器环境分配服务、AI对话助手、OAuth、支付系统、站内积分、异步任务等模块在内的整个网站所有主要接口的设计及开发工作；</>,
               <>封装 Docker Swarm 实现独特的容器编排服务，支持用户环境的快速保存和启动、NAS 持久化存储挂载，保障系统稳定运行用户容器实验<b>30w+</b>次、云主机实验<b>3w+</b>次；</>,
-              // <>独立完成基于 Github Action 的完整 CICD 流程，容器化部署微服务，支持产品的快速迭代交付；</>,
-              <>通过GA流量分析、SEMRush分析、SEO优化、AB测试运营策略等多种手段促长自然流量、提升转化率，帮助产品<b>从0成长到15w+</b>用户量；</>,
+              <>负责 CICD 建设，容器化部署微服务，支持产品的快速迭代交付；</>,
               <>通过<b>AI实际应用</b>提升产研人效，如自动化运营社交账号、识别及打击恶意用户操作、自动化产出格式化课程内容、实时制作课程封面等等。</>,
+              // <>通过GA流量分析、SEMRush分析、SEO优化、AB测试运营策略等多种手段促长自然流量、提升转化率，帮助产品<b>从0成长到15w+</b>用户量；</>,
             ],
             // <><Title text="公司简介" />：10人左右技术范小团队，主要创建 LabEx（在线IT实验与AI教学网站 <ExternalLink url="https://labex.io" /> ）和 GetVM（云桌面浏览器插件 <ExternalLink url="https://getvm.io" /> ）两款产品；</>,
             // <><Title text="工作内容" />：担任<b>技术合伙人</b>合伙创办该公司，负责包括从0到1的技术团队组建、系统架构设计、核心代码编写、DevOps 的搭建及维护等等；</>,
@@ -150,15 +162,15 @@ const Resume = {
           description: [
             <><Title text="工作内容" />：负责广告审核的核心业务开发工作，逐步从只实现业务功能成长为可以<b>参与系统设计</b>的一员，可以独自完成服务设计与开发、应对系统突发流量等紧急情况等等；</>,
             <><Title text="荣誉奖项" />：在职期间持续保持 <b>绩效优异</b>，并于2022年4月获得<b>Spot Bonus</b> - 超出预期成果奖项；</>,
-            <><Title text="技术栈" />：Golang、Python、Redis、MySQL、ES、Kafka、HiveSQL；</>,
+            <><Title text="技术栈" />：Golang、Python、Redis、MySQL、ElasticSearch、Kafka；</>,
             <><Title text="主要产出 & 工程难点" />：</>,
             [
-              <>参与风控规则平台系统设计，负责核心业务代码编写，实现MVP版本支撑 <b>15w+ QPS</b> 数据流的目标；</>,
-              <>在替代老送审方案的过程中，负责灰度测试、服务放量等工作，成功完成了 10 个以上业务队列的平滑接入；</>,
-              <>负责开发模型迭代平台核心业务代码，实现模型迭代的全流程自动化处理，平均提升用户工作效率<b>40%以上</b>（由模型同学统计，精确到秒）；</>,
-              <>在灰度能力迭代工作中，负责离线数据复用方案的实现，节约<b>95%硬件资源</b>（由CPU核数和内存统计），并在不同情境下提升约<b>20% ~ 40% 运行效率</b>；</>,
-              <>编写关联图谱平台核心代码，完成离线数据清洗 → 数据导入 → ES查询的完整链路的搭建，在上线后4个月内协助运营同学在百万级用户量中精准打击了<b>1400+</b>违规用户；</>,
-              <>工作之余完成个人负责项目40% ~ 60%的单测覆盖率，同时建设了多个基础组件。</>,
+              <>负责风控规则平台从零到一搭建，完成处理大规模数据流的规则引擎开发，实现MVP版本支撑 <b>15w+ QPS</b> 的目标；</>,
+              // <>在替代老送审方案的过程中，负责灰度测试、服务放量等工作，成功完成了 10 个以上业务队列的平滑接入；</>,
+              <>负责模型迭代平台核心功能开发，实现模型迭代的全流程自动化处理，平均提升用户工作效率<b>40%以上</b>（由模型同学统计，精确到秒）；</>,
+              <>在灰度能力迭代工作中，实现离线数据复用方案，节约<b>95%硬件资源</b>（由CPU核数和内存统计），并在不同情境下提升约<b>20% ~ 40% 运行效率</b>；</>,
+              <>在关联图谱平台开发工作中，完成离线数据清洗 → 数据导入 → ES查询的完整链路的搭建，在上线后4个月内协助运营同学在百万级用户量中精准打击了<b>1400+</b>违规用户；</>,
+              <>工作之余完成老项目~60%的单测覆盖率，同时建设了多个基础组件。</>,
             ],
             // <><Title text="主要产出" />：</>,
             // [
