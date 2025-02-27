@@ -108,7 +108,7 @@ const Resume = {
         {
           name: <>北京光智时空科技有限公司</>,
           duration: "2024/10 - 至今",
-          position: "全栈工程师",
+          // position: "全栈工程师",
           description: [
             <><Title text="技术栈" />：Python、K8s、Terraform、AWS/GCP DevOps；</>,
             <><Title text="主要产出" />：</>,
